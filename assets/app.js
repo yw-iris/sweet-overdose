@@ -58,11 +58,11 @@
 (function () {
   const term = document.getElementById('term'), enter = document.getElementById('enter');
   const lines = [
-    '<span class="p">&gt; 拉开卷帘 · 点亮窗台的薄荷 ...</span>',
-    '&gt; 煮一锅 <span class="ok">青提糖水</span> / 打发 <span class="ok">海盐奶盖</span> / 冰镇 <span class="ok">荔枝气泡</span>',
-    '&gt; 今日店主：<span class="p">阿枯</span> · 白羊 · ENFP · 20 ... <span class="ok">已就位</span>',
+    '<span class="p">&gt; 拂去尘埃 · 展开画卷 ...</span>',
+    '&gt; 点亮 <span class="ok">檐下灯</span> / 洒落 <span class="ok">花瓣雨</span> / 研墨 <span class="ok">旧时字</span>',
+    '&gt; 座隅候客：<span class="p">阿枯</span> · 白羊 · ENFP · 20 ... <span class="ok">已入座</span>',
     '&gt; 「总以为一打喷嚏，就是有人想我」',
-    '&gt; 推门即可，<span class="ok">甜度自取</span>'
+    '&gt; 推门即可，<span class="ok">请慢些走</span>'
   ];
   let i = 0, j = 0;
   function step() {
@@ -79,7 +79,7 @@
     document.body.classList.remove('locked');
     spawnSugar();
     const t = document.getElementById('toast');
-    t.textContent = '窗台薄荷已醒 · 欢迎入座'; t.classList.add('show');
+    t.textContent = '檐下灯已亮 · 欢迎入座'; t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2400);
   });
 })();
@@ -173,7 +173,7 @@ function spawnSugar() {
   const prog = document.getElementById('prog'), hudSec = document.getElementById('hud-sec');
   const secs = [...document.querySelectorAll('main section')];
   const navA = [...document.querySelectorAll('#sectors a')];
-  const ids = ['卷首', '卷一', '卷二', '卷三', '卷四', '卷五', '卷六', '卷七', '卷终'];
+  const ids = ['卷首', '卷一', '卷二', '卷三', '卷四', '卷五', '卷终'];
   addEventListener('scroll', () => {
     const h = document.documentElement;
     prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
