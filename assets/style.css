@@ -316,9 +316,19 @@ body{-webkit-tap-highlight-color:transparent}
 .note::before{content:'';position:absolute;top:-9px;left:50%;width:46px;height:16px;margin-left:-23px;
   transform:rotate(-3deg);background:rgba(236,231,213,.72);box-shadow:0 2px 5px rgba(0,0,0,.14)}
 .note:hover{transform:translateY(-5px) rotate(0deg)!important;box-shadow:4px 12px 22px rgba(60,50,30,.32);z-index:10}
-.sn1{left:47%;top:20px;transform:rotate(6deg);z-index:7}
-.sn2{right:8px;bottom:236px;transform:rotate(-5deg);z-index:7}
-.sn3{left:-6px;top:296px;transform:rotate(5deg);z-index:7}
+
+.ent{position:absolute;width:178px;background:#fff;padding:7px 7px 5px;box-shadow:2px 8px 18px rgba(60,50,30,.26);
+  text-decoration:none;cursor:pointer;z-index:7;transition:transform .25s,box-shadow .25s}
+.ent img{width:100%;height:122px;object-fit:cover;display:block;filter:saturate(.92);border-radius:1px}
+.ent span{font-family:'Noto Sans SC',sans-serif;font-size:12px;line-height:1.5;color:#4a4632;text-align:center;
+  display:block;padding:9px 6px 5px;letter-spacing:.04em}
+.ent::before{content:'';position:absolute;top:-9px;left:50%;width:46px;height:16px;margin-left:-23px;
+  transform:rotate(-3deg);background:rgba(236,231,213,.78);box-shadow:0 2px 5px rgba(0,0,0,.14)}
+.ent:hover{transform:translateY(-5px) rotate(0deg)!important;box-shadow:4px 14px 26px rgba(60,50,30,.32);z-index:11}
+.ent.sn1{left:46%;top:14px;transform:rotate(5deg)}
+.ent.sn2{right:6px;bottom:250px;transform:rotate(-5deg)}
+.ent.sn3{left:-10px;top:300px;transform:rotate(5deg)}
+.ent-tag{right:348px;bottom:54px;transform:rotate(-7deg)}
 
 .mini-poster{display:flex;flex-direction:column;align-items:center;gap:8px;background:#f2edda;border:1px solid #d8d2c2;
   padding:20px 14px;text-align:center;box-shadow:3px 5px 0 rgba(43,43,38,.14);cursor:pointer;transition:all .3s;
@@ -382,7 +392,8 @@ body{-webkit-tap-highlight-color:transparent}
   .cl-photo img{height:148px;object-fit:cover}
   .ph2{cursor:default}
   .cl-postcard{position:static;transform:rotate(1.5deg);width:280px;order:3}
-  .cl-tag{position:static;transform:rotate(-3deg);order:4}
+  .ent{position:static;display:inline-block;margin:5px;transform:rotate(-2deg)!important;width:auto;order:4}
+  .ent img{height:118px}
   .note{position:static;display:inline-block;margin:4px;transform:rotate(-2deg)!important;width:auto;order:5}
   .tabs{order:3;width:100%;justify-content:flex-start}
   #desk-top{flex-direction:column}
@@ -555,6 +566,8 @@ body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不
   .cl-postcard{position:static;width:220px;transform:rotate(1.5deg)}
   .cl-postcard img{height:100px}
   .cl-tag{position:static}
+  .ent{position:static;display:inline-block;margin:5px;transform:rotate(-2deg)!important;width:auto}
+  .ent img{height:104px}
   .note{position:static;display:inline-block;margin:5px;transform:rotate(-2deg)!important;width:auto}
   .tape{display:none}
   section{min-height:auto!important;padding:52px 20px!important}
