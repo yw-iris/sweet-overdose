@@ -513,3 +513,34 @@ a[data-go]{cursor:pointer}
 .mi:not([data-go]),.tag-card:not([data-go]),.note:not([data-go]),.mini-poster:not([data-go]),.polaroid:not([data-go]){cursor:default}
 .mi:not([data-go]):hover,.tag-card:not([data-go]):hover,.mini-poster:not([data-go]):hover,.polaroid:not([data-go]):hover{transform:none;box-shadow:var(--soft,0 10px 30px rgba(0,0,0,.1))}
 .note:not([data-go]):hover{transform:rotate(-1deg)}
+
+/* ---- 详情页排版精致化 ---- */
+body.archive-on .sec-tag{letter-spacing:.14em;font-size:12.5px;margin-bottom:22px}
+body.archive-on .sec-tag .id{letter-spacing:.22em}
+body.archive-on .title{font-size:clamp(28px,4.4vw,48px);letter-spacing:.04em;line-height:1.4;margin-bottom:6px}
+body.archive-on .lead{font-size:clamp(14px,1.6vw,16.5px);line-height:2.15;letter-spacing:.09em;max-width:36em}
+body.archive-on .profile{gap:26px}
+body.archive-on .card{padding:30px 30px 28px;border-radius:16px}
+body.archive-on .card .lab{font-size:12px;letter-spacing:.3em;margin-bottom:16px}
+body.archive-on .p-row{padding:9px 0;border-bottom:1px dashed rgba(95,122,82,.22)}
+body.archive-on .p-row:last-of-type{border-bottom:0}
+body.archive-on .motto{font-size:clamp(17px,2.2vw,21px);line-height:2;letter-spacing:.1em;padding:18px 20px}
+body.archive-on .chip{letter-spacing:.08em}
+body.archive-on .chip b{letter-spacing:.14em}
+body.archive-on .cup{padding:26px 24px}
+body.archive-on .cup p{line-height:2.15;letter-spacing:.06em}
+body.archive-on .hole-tx{letter-spacing:.08em}
+body.archive-on .lily .en{letter-spacing:.06em}
+body.archive-on .lily .cn{letter-spacing:.14em}
+body.archive-on .water-note{letter-spacing:.18em;margin-top:38px}
+body.archive-on .dream-t{letter-spacing:.05em;line-height:1.6}
+body.archive-on #end h2{letter-spacing:.12em;line-height:1.7}
+body.archive-on #end .line{letter-spacing:.1em;line-height:2.1}
+body.archive-on .sig{letter-spacing:.34em}
+body.archive-on .footer{letter-spacing:.18em}
+body.archive-on .hero-kicker{letter-spacing:.5em;font-size:13px}
+body.archive-on h1.hero-t{letter-spacing:.12em}
+body.archive-on .hero-quote{letter-spacing:.14em;line-height:2.1}
+body.archive-on .hero-cite{letter-spacing:.36em}
+body.archive-on main section{padding:72px 20px}
+body.archive-on #end h2{margin-top:6px}
