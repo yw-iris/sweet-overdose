@@ -11,8 +11,8 @@
     setTimeout(() => t.classList.remove('show'), 2200);
   }
 
-  const ORDER = ['hero', 'about', 'hole', 'notice', 'dream', 'script', 'reviews', 'cards', 'end'];
-  const NAMES = { hero: '卷首 · 入座', about: '关于我', hole: '树洞', notice: '须知', dream: '梦境', script: '话术', reviews: '板评', cards: '卡类', end: '卷终' };
+  const ORDER = ['about', 'hole', 'notice', 'script', 'reviews', 'cards', 'end'];
+  const NAMES = { about: '关于我', hole: '树洞', notice: '须知', script: '话术', reviews: '板评', cards: '卡类', end: '卷终' };
   let curIdx = 0;
 
   function setModule(sec) {

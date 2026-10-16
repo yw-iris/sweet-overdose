@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=14">
+<link rel="stylesheet" href="assets/style.css?v=15">
 </head>
 <body class="desk-on">
 
@@ -22,14 +22,12 @@
       <span>過於依賴妳也怪我嗎</span>
     </div>
     <nav class="tabs">
-      <a class="on" data-go="hero"><b>01</b> 卷首</a>
-      <a data-go="dream"><b>02</b> 梦境</a>
-      <a data-go="hole"><b>03</b> 树洞</a>
-      <a data-go="about"><b>04</b> 关于我</a>
-      <a data-go="notice"><b>05</b> 须知</a>
-      <a data-go="script"><b>06</b> 话术</a>
-      <a data-go="reviews"><b>07</b> 板评</a>
-      <a data-go="cards"><b>08</b> 卡类</a>
+      <a data-go="hole"><b>01</b> 树洞</a>
+      <a data-go="about"><b>02</b> 关于我</a>
+      <a data-go="notice"><b>03</b> 须知</a>
+      <a data-go="script"><b>04</b> 话术</a>
+      <a data-go="reviews"><b>05</b> 板评</a>
+      <a data-go="cards"><b>06</b> 卡类</a>
     </nav>
     <div class="mode-panel">
       <span class="mp-t">墙面 <i>✦</i></span>
@@ -63,10 +61,10 @@
         <img src="assets/sparkle.jpg" alt="小灯之海">
         <span>sea of small lights</span>
       </figure>
-      <figure class="cl-photo ph3" data-go="dream">
+      <figure class="cl-photo ph3">
         <i class="clip"></i>
-        <img src="assets/blossom.jpg" alt="花开雨后">
-        <span>梦境 · 花开雨后</span>
+        <img src="assets/bamboo-water.jpg" alt="水下竹林">
+        <span>slow water · 水下竹林</span>
       </figure>
 
       <article class="cl-main">
@@ -78,10 +76,10 @@
           <div><dt>档案编号</dt><dd>GA-2026-09</dd></div>
           <div><dt>馆主</dt><dd>阿枯 · 白羊 / ENFP / 双 / 20</dd></div>
           <div><dt>风格一览</dt><dd>高恋日常 / 温柔文艺 / 引导·白骑士·自虐</dd></div>
-          <div><dt>收录内容</dt><dd>信号 / 树洞 / 梦境 / 话术 / 板评 / 卡类</dd></div>
+          <div><dt>收录内容</dt><dd>树洞 / 关于我 / 须知 / 话术 / 板评 / 卡类</dd></div>
           <div><dt>状态</dt><dd>常驻 · 在线 · 檐下灯常明</dd></div>
         </dl>
-        <a class="handle" data-go="hero">入座 · 进卷首</a>
+        <a class="handle" data-go="about">入座 · 关于我</a>
       </article>
 
       <figure class="cl-postcard" data-go="hole">
@@ -112,7 +110,7 @@
     <p class="wall-sub">the quiet botanical bureau — 慢一点，也没关系</p>
     <div class="cork">
       <div class="polaroid r-2" data-go="about"><img src="assets/river.jpg" alt=""><span>关于我 · 溪水慢流</span></div>
-      <div class="polaroid r1" data-go="dream"><img src="assets/hero-bg.jpg" alt=""><span>梦境 · 花开雨后</span></div>
+      <div class="polaroid r1"><img src="assets/ripple-grass.jpg" alt=""><span>草间涟漪 · green ripples</span></div>
       <div class="polaroid r-1"><img src="assets/sparkle.jpg" alt=""><span>sea of small lights</span></div>
       <a class="note y w1" data-go="hole">树洞 ·<br>雨天常年开放 ~</a>
       <div class="polaroid r2"><img src="assets/blossom.jpg" alt=""><span>flower market · copenhagen</span></div>
@@ -122,7 +120,7 @@
       </div>
       <a class="note g w3" data-go="notice">海龟的提醒：<br>方向 ＞ 速度</a>
       <a class="note y w4">ARCHIVE RULES:<br>do not rush · let it rest ·<br>grow every spring ~</a>
-      <div class="polaroid r-2"><img src="assets/hero-bg.jpg" alt=""><span>nowhere to be</span></div>
+      <div class="polaroid r-2"><img src="assets/water-strip.jpg" alt=""><span>潮汐拼贴 · tide strips</span></div>
       <div class="polaroid r1"><img src="assets/rain-flower.jpg" alt=""><span>small green window</span></div>
     </div>
     <p class="wall-foot">— made by yw-iris 🌿</p>
@@ -145,26 +143,6 @@
 
 
   <main>
-    <section id="hero">
-      <div class="sunburst"></div>
-      <div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div>
-      <div class="hero-kicker" data-fx>過 於 依 賴 妳 也 怪 我 嗎 · 卷 首</div>
-      <div class="hero-strike" data-fx>
-        <span>我该怎么形容你呢</span>
-        <span>我生命中的一道淤青</span>
-        <span>也许思念</span>
-        <span>是潮湿的木檀</span>
-      </div>
-      <div class="hero-music" data-fx><i>♫</i> I'm done — Vincentz</div>
-      <h1 class="hero-t">
-        <span style="--d:.1s" data-c="過">過</span><span style="--d:.26s" data-c="於">於</span><span style="--d:.42s" data-c="依">依</span><span style="--d:.58s" data-c="賴">賴</span><span class="g" style="--d:.74s" data-c="妳">妳</span><br>
-        <span style="--d:1.02s" data-c="也">也</span><span style="--d:1.18s" data-c="怪">怪</span><span style="--d:1.34s" data-c="我">我</span><span class="g" style="--d:1.5s" data-c="嗎">嗎</span>
-      </h1>
-      <p class="hero-quote" data-fx><i>＞＞＞</i> 我知这世间回忆淡如水</p>
-      <div class="hero-cite" data-fx>然本就露水相逢 ＜＜＜</div>
-      <div class="scroll-hint">入 座</div>
-    </section>
-
     <section id="about">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
       <div class="sec-tag" data-fx><span class="id">卷一</span> 关于我 // 阿枯的音介</div>
@@ -172,7 +150,7 @@
       <p class="lead" data-fx><i>＞＞＞</i> 阿枯是只白羊座的小太阳，ENFP 的雷达总先捕捉到别人的低落。<br>等一个愿意慢慢说话的人。</p>
       <div class="profile">
         <div class="card" data-fx>
-          <div class="card-img"><img src="assets/rain-flower.jpg" alt="雨窗白花 · 阿枯的绿色小世界"></div>
+          <div class="card-img"><img src="assets/ripple-flower.jpg" alt="蓝花涟漪 · 阿枯的绿色小世界"></div>
           <div class="lab">个人信息 · PROFILE</div>
           <div class="p-row"><span class="k">昵称</span><span class="v"><em>阿枯</em></span></div>
           <div class="p-row"><span class="k">星座｜MBTI</span><span class="v">白羊｜<em>ENFP</em></span></div>
@@ -209,7 +187,7 @@
 
     <section id="hole">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷三</span> 树洞 // RAINY DAYS</div>
+      <div class="sec-tag" data-fx><span class="id">卷二</span> 树洞 // RAINY DAYS</div>
       <div class="rain-wrap">
         <div class="letter" data-fx>
           <div class="letter-v">
@@ -239,7 +217,7 @@
 
     <section id="notice">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷四</span> 须知 // NOTICE</div>
+      <div class="sec-tag" data-fx><span class="id">卷三</span> 须知 // NOTICE</div>
       <h2 class="title" data-fx>入座前请<b>过目须知</b></h2>
       <p class="lead" data-fx><i>＞＞＞</i> 座隅很小，规矩很轻：<b style="color:var(--mint3)">尊重 · 双向 · 不越界</b>。</p>
       <ul class="rules" data-fx>
@@ -275,25 +253,9 @@
       </div>
     </section>
 
-    <section id="dream">
-      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷五</span> 梦境一隅 // FLOS DREAM</div>
-      <div class="dream-wrap">
-        <div class="dream-img" data-fx><img src="assets/sparkle.jpg" alt="梦境样本 · FLOS DREAM"></div>
-        <div class="dream-tx" data-fx>
-          <h3 class="dream-t">拾一枚<br><b>梦境样本</b></h3>
-          <p class="lead"><i>＞＞＞</i> 我想走进你的生命里<br>哪怕只有一点点<br>但我发现我是贪心的——<br>有了一点点，就会想要全部。 ＜＜＜</p>
-          <div class="lily" style="margin-top:22px">
-            <div class="en">“Come whatever, I may fade away.”</div>
-            <div class="cn">纵然消逝，亦随它去 —— SeedCase · FLOS DREAM</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="script">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷六</span> 话术 // SCRIPT</div>
+      <div class="sec-tag" data-fx><span class="id">卷四</span> 话术 // SCRIPT</div>
       <h2 class="title" data-fx>聊天实录 · <b>话术八则</b></h2>
       <p class="lead" data-fx><i>＞＞＞</i> 世界不管怎么变化我都不会离开，<br>哪怕我们都变成了小鸟，我也会和你飞在一起。</p>
       <div class="gallery" data-fx>
@@ -315,7 +277,7 @@
 
     <section id="reviews">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷七</span> 板评 // REVIEWS</div>
+      <div class="sec-tag" data-fx><span class="id">卷五</span> 板评 // REVIEWS</div>
       <h2 class="title" data-fx>来自星星的<b>评价</b></h2>
       <p class="lead" data-fx><i>＞＞＞</i> 每一条评价，都是一次露水相逢的回声。</p>
       <div class="review-wrap" data-fx>
@@ -337,7 +299,7 @@
 
     <section id="cards">
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-      <div class="sec-tag" data-fx><span class="id">卷八</span> 卡类 // CARDS</div>
+      <div class="sec-tag" data-fx><span class="id">卷六</span> 卡类 // CARDS</div>
       <h2 class="title" data-fx>两颗心，<b>合二为一</b></h2>
       <p class="lead" data-fx><i>＞＞＞</i> 必须经过漫长の旅程，两颗心才能合二为一。</p>
       <figure class="shot collage" data-fx><img src="assets/cards/collage.jpg" alt="卡类拼贴 · 必须经过漫长の旅程，两颗心才能合二为一 —— @阿枯"></figure>
