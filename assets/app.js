@@ -11,13 +11,10 @@
     setTimeout(() => t.classList.remove('show'), 2200);
   }
 
-  const ORDER = ['hero', 'about', 'memo', 'hole', 'notice', 'dream', 'end'];
   const NAMES = { hero: '卷首 · 入座', about: '关于我', memo: '三杯记', hole: '树洞', notice: '须知', dream: '梦境', end: '卷终' };
-  let curIdx = 0;
 
   function setModule(sec) {
     document.querySelectorAll('#archive main section').forEach(s => { s.hidden = (s.id !== sec); });
-    document.querySelectorAll('.mb-link').forEach(a => a.classList.toggle('on', a.dataset.go === sec));
     curIdx = ORDER.indexOf(sec);
     requestAnimationFrame(() => window.scrollTo(0, 0));
     toast('已打开「' + (NAMES[sec] || sec) + '」');
@@ -50,8 +47,6 @@
     el.addEventListener('click', e => { e.preventDefault(); openArchive(el.dataset.go); });
   });
   document.getElementById('back-desk').addEventListener('click', backToDesk);
-  document.getElementById('mb-prev').addEventListener('click', () => setModule(ORDER[(curIdx + ORDER.length - 1) % ORDER.length]));
-  document.getElementById('mb-next').addEventListener('click', () => setModule(ORDER[(curIdx + 1) % ORDER.length]));
 
   /* 模块去向提示：已改为在模块文字里直接写明，不再注入角标 */
 
