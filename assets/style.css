@@ -544,3 +544,11 @@ body.archive-on .hero-quote{letter-spacing:.14em;line-height:2.1}
 body.archive-on .hero-cite{letter-spacing:.36em}
 body.archive-on main section{padding:72px 20px}
 body.archive-on #end h2{margin-top:6px}
+
+/* ---- 文档风格：删除线引子诗 ＞＞＞ 引导语 ---- */
+body.archive-on .hero-strike{margin:6px 0 18px;display:flex;flex-direction:column;gap:8px;z-index:2;position:relative}
+body.archive-on .hero-strike span{font-size:clamp(13px,1.6vw,16px);letter-spacing:.3em;color:var(--dim2);text-decoration:line-through;text-decoration-color:rgba(154,149,126,.55);text-decoration-thickness:1px}
+body.archive-on .hero-quote i{font-style:normal;color:var(--sun2);letter-spacing:.1em}
+body.archive-on .lead i{font-style:normal;color:var(--sun2);letter-spacing:.12em}
+body.archive-on .motto.strike{text-decoration:line-through;text-decoration-color:rgba(154,149,126,.5);text-decoration-thickness:1.5px}
+body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不会消失';display:block;text-decoration:none;font-size:12px;letter-spacing:.2em;color:var(--dim2);margin-top:10px;font-family:'Noto Sans SC',sans-serif;font-weight:400}
