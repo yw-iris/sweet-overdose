@@ -11,7 +11,9 @@
     setTimeout(() => t.classList.remove('show'), 2200);
   }
 
-  const NAMES = { hero: '卷首 · 入座', about: '关于我', memo: '三杯记', hole: '树洞', notice: '须知', dream: '梦境', end: '卷终' };
+  const ORDER = ['hero', 'about', 'hole', 'notice', 'dream', 'end'];
+  const NAMES = { hero: '卷首 · 入座', about: '关于我', hole: '树洞', notice: '须知', dream: '梦境', end: '卷终' };
+  let curIdx = 0;
 
   function setModule(sec) {
     document.querySelectorAll('#archive main section').forEach(s => { s.hidden = (s.id !== sec); });
