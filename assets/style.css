@@ -465,6 +465,10 @@ body{-webkit-tap-highlight-color:transparent}
 
 /* ═══════ 内页 · 档案纸感适配 ═══════ */
 body.archive-on{
+  --serif:'Noto Sans SC',sans-serif;
+  --cute:'Noto Sans SC',sans-serif;
+  --brush:'Noto Sans SC',sans-serif;
+  --mono:'Share Tech Mono',monospace;
   --bg:#efe9da;--bg2:#e6dfcc;
   --panel:rgba(251,248,238,.94);
   --line:rgba(95,122,82,.32);--line-mint:rgba(74,124,89,.5);--line-sun:rgba(217,168,78,.6);
@@ -485,6 +489,9 @@ body.archive-on .letter{background:linear-gradient(160deg,#fbf8ee,#f2ecd9)}
 body.archive-on .petal{opacity:.55}
 body.archive-on .title b,body.archive-on h1.hero-t span.g,body.archive-on #end h2 .g{text-shadow:none}
 body.archive-on .doc-link,body.archive-on .chip,body.archive-on .cup,body.archive-on .svc{background:rgba(251,248,238,.92)}
+body.archive-on .title,body.archive-on .motto,body.archive-on .hole-t,body.archive-on .dream-t,
+body.archive-on #end h2,body.archive-on .water-note,body.archive-on h1.hero-t{font-weight:900;letter-spacing:.06em;font-family:'Noto Sans SC',sans-serif}
+body.archive-on .letter-v{font-family:'Noto Sans SC',sans-serif;font-weight:700}
 
 /* ---- 模块导航条（已移除，仅保留隐藏规则） ---- */
 #archive main section[hidden]{display:none!important}
