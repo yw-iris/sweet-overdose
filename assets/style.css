@@ -633,7 +633,7 @@ body.archive-on .doc-links{margin-top:34px}
   .tape{display:none}
   section{min-height:auto!important;padding:52px 20px!important}
   body.archive-on main section{padding:46px 18px!important}
-  .profile,.rain-wrap{grid-template-columns:1fr 1fr;gap:20px}
+  .profile{grid-template-columns:1fr 1fr;gap:20px}
   .card-img{height:148px;margin:-28px -28px 16px}
   .letter{min-height:auto;padding:24px 18px}
   #back-desk{top:10px;left:10px;padding:7px 12px;font-size:12px}
@@ -652,7 +652,7 @@ body.archive-on .doc-links{margin-top:34px}
 }
 @media (orientation:landscape) and (max-height:430px){
   section{padding:38px 16px!important}
-  .profile,.rain-wrap{grid-template-columns:1fr}
+  .profile{grid-template-columns:1fr}
   .card-img{height:120px}
   .gallery{columns:2;column-gap:10px}
   .shot.tall{grid-row:auto}
