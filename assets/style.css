@@ -487,6 +487,7 @@ body.archive-on .title b,body.archive-on h1.hero-t span.g,body.archive-on #end h
 body.archive-on .doc-link,body.archive-on .chip,body.archive-on .cup,body.archive-on .svc{background:rgba(251,248,238,.92)}
 
 /* ---- 模块导航条 ---- */
+#archive main section[hidden]{display:none!important}
 .module-bar{position:sticky;top:0;z-index:1400;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
   padding:10px 20px;background:rgba(251,248,238,.96);border-bottom:1px solid #d8d2c2;
   box-shadow:0 4px 14px rgba(60,50,30,.08);backdrop-filter:blur(6px)}
