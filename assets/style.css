@@ -28,7 +28,7 @@ body.desk-on{background:#e9e4d8!important;background-image:none!important}
 body.archive-on{background:#f6fcf8!important}
 ::selection{background:rgba(255,217,142,.42)}
 #bg{position:fixed;inset:0;z-index:0;pointer-events:none}
-#grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+#grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.34;
   background:linear-gradient(rgba(111,205,174,.13) 1px,transparent 1px),
     linear-gradient(90deg,rgba(111,205,174,.13) 1px,transparent 1px);
   background-size:58px 58px;
@@ -500,13 +500,25 @@ body.archive-on #end h2{letter-spacing:.1em;line-height:1.7;font-weight:700;text
 body.archive-on #end .line{letter-spacing:.1em;line-height:2.1}
 body.archive-on .sig{letter-spacing:.34em}
 body.archive-on .footer{letter-spacing:.18em}
-body.archive-on main section{padding:72px 20px}
+body.archive-on main{max-width:980px;margin:0 auto}
+body.archive-on main section{padding:80px 26px}
 body.archive-on #end h2{margin-top:8px}
 
 /* ---- 文档风格：删除线引子诗 ＞＞＞ 引导语 ---- */
 body.archive-on .lead i{font-style:normal;color:var(--sun2);letter-spacing:.12em}
 body.archive-on .motto.strike{text-decoration:line-through;text-decoration-color:rgba(154,149,126,.5);text-decoration-thickness:1.5px}
 body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不会消失';display:block;text-decoration:none;font-size:12px;letter-spacing:.2em;color:var(--dim2);margin-top:10px;font-family:'Noto Sans SC',sans-serif;font-weight:400}
+
+/* ---- 详情页 · 内容列与分区分隔线 ---- */
+body.archive-on main section[data-fx],body.archive-on main section .sec-tag{position:relative}
+.sec-rule{display:flex;align-items:center;justify-content:center;gap:16px;margin:46px 0 10px}
+.sec-rule::before,.sec-rule::after{content:'';height:1px;flex:1;max-width:160px;
+  background:linear-gradient(90deg,transparent,rgba(95,122,82,.5),transparent)}
+.sec-rule i{width:7px;height:7px;transform:rotate(45deg);background:var(--mint2);
+  box-shadow:0 0 9px rgba(111,205,174,.65);flex:none;border-radius:1px}
+body.archive-on .lead,.archive-on .hole-tx,.archive-on .confess,.archive-on .poll-hint{max-width:36em}
+body.archive-on .rules,.archive-on .wishes,.archive-on .poll,.archive-on .confess,.archive-on .counter{margin-left:auto;margin-right:auto}
+body.archive-on .doc-links{margin-top:34px}
 
 /* ---- 关于我 · 单选投票 ---- */
 .poll{margin-top:44px;max-width:560px;border:1px solid var(--line-mint);border-radius:18px;
