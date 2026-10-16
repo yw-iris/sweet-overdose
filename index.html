@@ -9,45 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600&family=Noto+Sans+SC:wght@300;400;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🍧</text></svg>">
 </head>
 <body class="locked">
-
-<!-- 内联图标 -->
-<svg style="display:none" aria-hidden="true">
-  <symbol id="ic-cup" viewBox="0 0 48 48">
-    <path d="M12 12h24l-2 26a4 4 0 0 1-4 3H18a4 4 0 0 1-4-3z" fill="#a8ecd2" stroke="#3fae8f" stroke-width="2"/>
-    <circle cx="20" cy="26" r="2.6" fill="#fff" opacity=".8"/><circle cx="28" cy="33" r="2" fill="#fff" opacity=".7"/>
-    <path d="M28 8l-4 10" stroke="#ff9d8c" stroke-width="3" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="ic-canele" viewBox="0 0 48 48">
-    <path d="M15 14h18l1.5 24a4 4 0 0 1-4 4h-13a4 4 0 0 1-4-4z" fill="#c07a45" stroke="#6b3d22" stroke-width="2"/>
-    <ellipse cx="24" cy="14" rx="9" ry="3.6" fill="#6b3a1b"/>
-    <path d="M19 18v22M24 18v23M29 18v22" stroke="#5b3218" stroke-width="1.4" opacity=".5"/>
-  </symbol>
-  <symbol id="ic-pudding" viewBox="0 0 48 48">
-    <path d="M12 22c0-6 5-10 12-10s12 4 12 10c0 4-5 6-12 6s-12-2-12-6z" fill="#f0c68d" stroke="#c08848" stroke-width="2"/>
-    <path d="M11 22h26l-2 16a5 5 0 0 1-5 4H18a5 5 0 0 1-5-4z" fill="#e0b075" stroke="#c08848" stroke-width="2"/>
-    <circle cx="24" cy="8" r="3.4" fill="#ff9d8c"/>
-    <path d="M24 12v3" stroke="#5cc2a1" stroke-width="2.4" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="ic-bean" viewBox="0 0 48 48">
-    <ellipse cx="24" cy="26" rx="13" ry="16" fill="#7c4f34" stroke="#4e2f1d" stroke-width="2"/>
-    <path d="M24 12c-6 6-6 24 0 28" stroke="#4e2f1d" stroke-width="2.4" fill="none"/>
-    <path d="M14 44c4-8 16-14 24-10" stroke="#a8ecd2" stroke-width="3" fill="none" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="ic-jar" viewBox="0 0 48 48">
-    <path d="M14 16h20v22a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z" fill="#eafaf3" stroke="#3fae8f" stroke-width="2"/>
-    <rect x="12" y="10" width="24" height="6" rx="2" fill="#d8b477" stroke="#7d5a33" stroke-width="1.6"/>
-    <path d="M19 24h10M19 30h12M19 36h8" stroke="#8fc4ae" stroke-width="2" stroke-linecap="round"/>
-  </symbol>
-  <symbol id="ic-sun" viewBox="0 0 48 48">
-    <circle cx="24" cy="24" r="9" fill="#ffd98e"/>
-    <g stroke="#ffc76b" stroke-width="2.4" stroke-linecap="round">
-      <path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/>
-    </g>
-  </symbol>
-</svg>
 
 <canvas id="bg"></canvas>
 <div id="grid"></div>
@@ -84,7 +47,6 @@
   <section id="hero">
     <div class="sunburst"></div>
     <div class="hero-bg"></div>
-    <div class="hero-art"><img src="assets/hero.svg" alt="薄荷气泡水与阳光"></div>
     <div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div>
     <div class="hero-kicker" data-fx>薄 荷 糖 水 铺 · 甜 度 常 开</div>
     <h1 class="hero-t">
@@ -116,7 +78,7 @@
         <div class="lab">// 座右铭</div>
         <div class="motto">细腻的你<br>唯独没看到自己的珍贵</div>
         <p class="lead" style="margin-top:18px">总以为一打喷嚏就是有人想我，我猜过很多人——<b style="color:var(--mint3)">唯独没有猜到是你</b>。</p>
-        <div class="sun-chip"><svg><use href="#ic-sun"></use></svg><span>窗台常有阳光 · 甜度自取</span></div>
+        <div class="sun-chip"><span>窗台常有阳光 · 甜度自取</span></div>
       </div>
     </div>
   </section>
@@ -148,9 +110,9 @@
     </div>
 
     <div class="chip-row" data-fx>
-      <div class="chip"><svg class="ci"><use href="#ic-cup"></use></svg><b>引导</b><span>蜂蜜柚子 · 先甜一口，再说</span></div>
-      <div class="chip"><svg class="ci"><use href="#ic-canele"></use></svg><b>白骑士</b><span>可丽露 · 脆壳挡在外面</span></div>
-      <div class="chip"><svg class="ci"><use href="#ic-bean"></use></svg><b>自虐</b><span>苦橙美式 · 不加糖，也不劝你</span></div>
+      <div class="chip"><b>引导</b><span>蜂蜜柚子 · 先甜一口，再说</span></div>
+      <div class="chip"><b>白骑士</b><span>可丽露 · 脆壳挡在外面</span></div>
+      <div class="chip"><b>自虐</b><span>苦橙美式 · 不加糖，也不劝你</span></div>
     </div>
   </section>
 
@@ -183,18 +145,23 @@
       </div>
     </div>
     <div class="trio-grid">
-      <div class="trio-item" data-fx>
-        <img src="assets/canele.svg" alt="可丽露 · 白骑士" loading="lazy">
-        <div class="trio-cap"><b>可丽露 · 白骑士</b><span>脆壳留在外 · 内里是软的</span></div>
+      <div class="fcard" data-fx>
+        <span class="fno">隐藏 · 01</span>
+        <b>可丽露 · 白骑士</b>
+        <span class="fen">CRISP OUTSIDE · SOFT INSIDE</span>
+        <p>脆壳留在外面，内里是软的。那些难听的话，我先替你挡一层。</p>
       </div>
-      <div class="trio-item" data-fx>
-        <img src="assets/coffee.svg" alt="苦橙美式 · 自虐" loading="lazy">
-        <div class="trio-cap"><b>苦橙美式 · 自虐</b><span>不加糖，也不劝你</span></div>
+      <div class="fcard" data-fx>
+        <span class="fno">隐藏 · 02</span>
+        <b>苦橙美式 · 自虐</b>
+        <span class="fen">NO SUGAR · NO PERSUADE</span>
+        <p>不加糖，也不劝你。苦的那部分，我陪你一起喝完。</p>
       </div>
-      <a class="trio-item is-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener" data-fx>
-        <span class="tap">点击可跳转 <i>↗</i></span>
-        <img src="assets/jar.svg" alt="糖罐 · 树洞信箱" loading="lazy">
-        <div class="trio-cap"><b>糖罐 · 树洞信箱</b><span>「叩响心门」· SWEET JAR</span><span class="go">↗</span></div>
+      <a class="fcard is-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener" data-fx>
+        <span class="fno">隐藏 · 03 <i>↗</i></span>
+        <b>糖罐 · 树洞信箱</b>
+        <span class="fen">「叩响心门」· SWEET JAR</span>
+        <p>信已经封好，收件人一栏空着。<em>等你来签收。</em></p>
       </a>
     </div>
     <div class="doc-links" data-fx>
@@ -213,17 +180,14 @@
     <div class="cups-img" data-fx><img src="assets/blossom.jpg" alt="青白花影 · 三杯记"></div>
     <div class="cup-grid">
       <div class="cup" data-fx>
-        <svg class="ci"><use href="#ic-cup"></use></svg>
         <h3>荔枝气泡 <small>致朋友</small></h3>
         <p>咕嘟咕嘟冒上来的，是你凌晨两点发来的长语音。<br>甜得没心没肺，最解腻。</p>
       </div>
       <div class="cup" data-fx>
-        <svg class="ci"><use href="#ic-pudding"></use></svg>
         <h3>焦糖布丁 <small>致恋人</small></h3>
         <p>太甜会腻，可我每次还是多敲一勺焦糖。<br>脆的那一层，是你先开口的那句。</p>
       </div>
       <div class="cup" data-fx>
-        <svg class="ci"><use href="#ic-jar"></use></svg>
         <h3>桂圆红枣茶 <small>致家人</small></h3>
         <p>不声不响地温着，凉了就有人替你热。<br>喝了很多年，才尝出味道。</p>
       </div>
@@ -289,6 +253,7 @@
 
   <!-- END -->
   <section id="end">
+    <div class="end-bg"></div>
     <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
     <div class="sec-tag" style="justify-content:center" data-fx><span class="id">END</span> 留白</div>
     <h2 data-fx>過於依賴<span class="g">妳</span><br>也怪我<span class="g">嗎</span></h2>
