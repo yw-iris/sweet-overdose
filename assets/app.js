@@ -11,8 +11,8 @@
     setTimeout(() => t.classList.remove('show'), 2200);
   }
 
-  const ORDER = ['hero', 'about', 'hole', 'notice', 'dream', 'end'];
-  const NAMES = { hero: '卷首 · 入座', about: '关于我', hole: '树洞', notice: '须知', dream: '梦境', end: '卷终' };
+  const ORDER = ['hero', 'about', 'hole', 'notice', 'dream', 'script', 'reviews', 'cards', 'end'];
+  const NAMES = { hero: '卷首 · 入座', about: '关于我', hole: '树洞', notice: '须知', dream: '梦境', script: '话术', reviews: '板评', cards: '卡类', end: '卷终' };
   let curIdx = 0;
 
   function setModule(sec) {
@@ -180,6 +180,26 @@ function spawnSugar() {
   window.__startAmbient = start;
   window.__stopAmbient = stop;
   btn.addEventListener('click', () => { playing ? stop() : start(); });
+})();
+
+/* ===== 卡类 · 相遇计时（自 2024-03-10 起累计） ===== */
+(function () {
+  const d = document.getElementById('cd-d');
+  if (!d) return;
+  const START = new Date('2024-03-10T00:00:00+08:00').getTime();
+  const pad = n => String(n).padStart(2, '0');
+  function tick() {
+    let t = Math.max(0, Date.now() - START);
+    const days = Math.floor(t / 864e5); t -= days * 864e5;
+    const h = Math.floor(t / 36e5); t -= h * 36e5;
+    const m = Math.floor(t / 6e4); t -= m * 6e4;
+    const s = Math.floor(t / 1e3);
+    d.textContent = days;
+    document.getElementById('cd-h').textContent = pad(h);
+    document.getElementById('cd-m').textContent = pad(m);
+    document.getElementById('cd-s').textContent = pad(s);
+  }
+  tick(); setInterval(tick, 1000);
 })();
 
 /* ===== 内页：滚动进度 + 卷宗高亮 + 入场 + 糖粒 ===== */

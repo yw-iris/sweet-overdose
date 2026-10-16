@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=12">
+<link rel="stylesheet" href="assets/style.css?v=13">
 </head>
 <body class="desk-on">
 
@@ -27,6 +27,9 @@
       <a data-go="hole"><b>03</b> 树洞</a>
       <a data-go="about"><b>04</b> 关于我</a>
       <a data-go="notice"><b>05</b> 须知</a>
+      <a data-go="script"><b>06</b> 话术</a>
+      <a data-go="reviews"><b>07</b> 板评</a>
+      <a data-go="cards"><b>08</b> 卡类</a>
     </nav>
     <div class="mode-panel">
       <span class="mp-t">墙面 <i>✦</i></span>
@@ -62,7 +65,7 @@
           <div><dt>档案编号</dt><dd>GA-2026-09</dd></div>
           <div><dt>馆主</dt><dd>阿枯 · 白羊 / ENFP / 双 / 20</dd></div>
           <div><dt>风格一览</dt><dd>高恋日常 / 温柔文艺 / 引导·白骑士·自虐</dd></div>
-          <div><dt>收录内容</dt><dd>信号 / 树洞 / 梦境</dd></div>
+          <div><dt>收录内容</dt><dd>信号 / 树洞 / 梦境 / 话术 / 板评 / 卡类</dd></div>
           <div><dt>状态</dt><dd>常驻 · 在线 · 檐下灯常明</dd></div>
         </dl>
         <a class="handle" data-go="hero">入座 · 进卷首</a>
@@ -71,6 +74,9 @@
       <a class="note g n2" data-go="dream">梦境 · 拾一枚梦境样本 →</a>
       <a class="note y n3" data-go="notice">须知 · 入座前请先过目</a>
       <a class="note g n5" data-go="about">关于我 · 细腻的你也是珍贵的 ✦</a>
+      <a class="note y n4" data-go="script">话术 · 聊天实录八则 →</a>
+      <a class="note g n6" data-go="reviews">板评 · 来自星与评价 →</a>
+      <a class="note y n7" data-go="cards">卡类 · 两颗心合二为一 →</a>
       <span class="stamp">常驻 · 在线</span>
     </div>
 
@@ -171,14 +177,17 @@
       <div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div>
       <div class="hero-kicker" data-fx>過 於 依 賴 妳 也 怪 我 嗎 · 卷 首</div>
       <div class="hero-strike" data-fx>
-        <span>檐下常亮一盏灯，等一个慢慢说话的人</span>
-        <span>慢慢来，不急</span>
+        <span>我该怎么形容你呢</span>
+        <span>我生命中的一道淤青</span>
+        <span>也许思念</span>
+        <span>是潮湿的木檀</span>
       </div>
+      <div class="hero-music" data-fx><i>♫</i> I'm done — Vincentz</div>
       <h1 class="hero-t">
         <span style="--d:.1s" data-c="過">過</span><span style="--d:.26s" data-c="於">於</span><span style="--d:.42s" data-c="依">依</span><span style="--d:.58s" data-c="賴">賴</span><span class="g" style="--d:.74s" data-c="妳">妳</span><br>
         <span style="--d:1.02s" data-c="也">也</span><span style="--d:1.18s" data-c="怪">怪</span><span style="--d:1.34s" data-c="我">我</span><span class="g" style="--d:1.5s" data-c="嗎">嗎</span>
       </h1>
-      <p class="hero-quote" data-fx><i>＞＞＞</i> 总以为一打喷嚏就是有人想我<br>我猜过很多人<br>唯独没有猜到<i>是你</i></p>
+      <p class="hero-quote" data-fx><i>＞＞＞</i> 我知这世间回忆淡如水</p>
       <div class="hero-cite" data-fx>然本就露水相逢 ＜＜＜</div>
       <div class="scroll-hint">入 座</div>
     </section>
@@ -195,7 +204,7 @@
           <div class="p-row"><span class="k">昵称</span><span class="v"><em>阿枯</em></span></div>
           <div class="p-row"><span class="k">星座｜MBTI</span><span class="v">白羊｜<em>ENFP</em></span></div>
           <div class="p-row"><span class="k">取向｜年龄</span><span class="v"><span class="hl">双</span>｜20</span></div>
-          <div class="p-row"><span class="k">状态</span><span class="v">常驻</span></div>
+          <div class="p-row"><span class="k">状态</span><span class="v">常驻 · <em>虚荣</em></span></div>
           <div class="flower"><i></i><i></i><i></i><span>露水相连</span></div>
         </div>
         <div class="card" data-fx>
@@ -216,6 +225,12 @@
         <div class="chip"><b>白骑士</b><span>硬的话我先替你挡一层</span></div>
         <div class="chip"><b>自虐</b><span>不劝你，苦的那段我陪着</span></div>
       </div>
+      <div class="poll" data-fx>
+        <div class="poll-q"><span class="pt">单选</span><b>你想要什么呢</b></div>
+        <div class="poll-opt"><i></i>爱人的能力</div>
+        <div class="poll-opt"><i></i>看见爱</div>
+        <p class="poll-hint">爱是两颗相互透明的心脏 · 人和人之间需要多少片涟漪才能长流 · 爱诞生于每次垂眸相视中</p>
+      </div>
     </section>
 
 
@@ -225,11 +240,9 @@
       <div class="rain-wrap">
         <div class="letter" data-fx>
           <div class="letter-v">
-            <s>我该怎么形容你呢</s><br>
-            <s>我生命中的一道淤青</s><br><br>
-            也许<span class="m">思念</span><br>
-            是潮湿的木檀<br><br>
-            我猜过很多人<br>
+            总以为一打喷嚏<br>
+            就是有人<span class="m">想我</span><br><br>
+            我猜过很多人<br><br>
             唯独没有猜到是<span class="g">你</span>
           </div>
         </div>
@@ -237,7 +250,7 @@
           <div class="rain-tag">- Rainy days -</div>
           <div class="hole-t">树洞 · <b>致你的一封信</b></div>
           <p class="hole-tx">雨天的树洞常年开放。心事可以整段丢进来，也可以只有一句没头没尾的<b>「今天有点累」</b>——都会被接住。</p>
-          <p class="hole-tx">信已经写好了，收件人一栏空着。<b>等你来签收。</b></p>
+          <p class="hole-tx"><b>等我的隐喻，被你读懂。</b>信已经写好了，收件人一栏空着——等你来签收。</p>
           <div class="lily">
             <div class="en">“…Silence and fragrance, just waiting for the predestined person to bend down to pick it.”</div>
             <div class="cn">寂静与芬芳，只等命定之人俯身拾起 —— Lily of the valley</div>
@@ -255,10 +268,36 @@
       <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
       <div class="sec-tag" data-fx><span class="id">卷四</span> 须知 // NOTICE</div>
       <h2 class="title" data-fx>入座前请<b>过目须知</b></h2>
-      <p class="lead" data-fx>座隅很小，规矩很轻：<b style="color:var(--mint3)">尊重 · 双向 · 不越界</b>。完整条款以文档为准。</p>
+      <p class="lead" data-fx><i>＞＞＞</i> 座隅很小，规矩很轻：<b style="color:var(--mint3)">尊重 · 双向 · 不越界</b>。</p>
+      <ul class="rules" data-fx>
+        <li>单内默认双方是恋人关系</li>
+        <li>下单前所有雷点、特殊需求请开局前全部说明</li>
+        <li>尊重双方，拒绝恶意试探｜故意踩雷｜恶搞剧本，友好沟通优先</li>
+        <li>婉拒人身攻击辱骂，单外骚扰</li>
+        <li>拒绝索要地址，手机号等隐私相关信息</li>
+        <li>过程中有任何不适请及时告知我</li>
+        <li>见面即开始，禁止恶意卡点退款</li>
+        <li>雷点请提前告知，踩暗雷均不负责，以该理由的客诉均不认定</li>
+      </ul>
+      <p class="rules-note" data-fx>下单默认已读 ↑</p>
+      <div class="wishes" data-fx>
+        <div class="wish"><i></i>你的偏执</div>
+        <div class="wish"><i></i>你的任性</div>
+        <div class="wish"><i></i>你的肆意妄为</div>
+        <div class="wish"><i></i>对于我而言都是世界的馈赠</div>
+      </div>
       <div class="doc-links" data-fx>
         <a class="doc-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener">
-          <span class="ico">▣</span><span>查看全部须知</span><span class="go">↗</span>
+          <span class="ico">▣</span><span>完整文档</span><span class="go">↗</span>
+        </a>
+        <a class="doc-link" href="https://www.kdocs.cn/l/ctO6dZJUARjb" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆话术</span><span class="go">↗</span>
+        </a>
+        <a class="doc-link" href="https://www.kdocs.cn/l/csHRNlvmt6qG" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆板评</span><span class="go">↗</span>
+        </a>
+        <a class="doc-link" href="https://www.kdocs.cn/l/ci5kbDOoQPBS" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆卡类</span><span class="go">↗</span>
         </a>
       </div>
     </section>
@@ -270,12 +309,80 @@
         <div class="dream-img" data-fx><img src="assets/sparkle.jpg" alt="梦境样本 · FLOS DREAM"></div>
         <div class="dream-tx" data-fx>
           <h3 class="dream-t">拾一枚<br><b>梦境样本</b></h3>
-          <p class="lead"><i>＞＞＞</i> 风把梦境吹成种子，落进薄荷绿的旷野——<br>有些会开花，有些化作星子，<br>等着某个俯身拾起它的人。 ＜＜＜</p>
+          <p class="lead"><i>＞＞＞</i> 我想走进你的生命里<br>哪怕只有一点点<br>但我发现我是贪心的——<br>有了一点点，就会想要全部。 ＜＜＜</p>
           <div class="lily" style="margin-top:22px">
             <div class="en">“Come whatever, I may fade away.”</div>
             <div class="cn">纵然消逝，亦随它去 —— SeedCase · FLOS DREAM</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="script">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷六</span> 话术 // SCRIPT</div>
+      <h2 class="title" data-fx>聊天实录 · <b>话术八则</b></h2>
+      <p class="lead" data-fx><i>＞＞＞</i> 世界不管怎么变化我都不会离开，<br>哪怕我们都变成了小鸟，我也会和你飞在一起。</p>
+      <div class="gallery" data-fx>
+        <figure class="shot tall"><img src="assets/script/s2.jpg" alt="话术实录 · 我得到了星星的启示，亲爱的你是拯救我的星星"><figcaption>我得到了星星的启示</figcaption></figure>
+        <figure class="shot"><img src="assets/script/s1.jpg" alt="话术实录 · 那样的话你就永远不会离开我了，不是别人，是你的爱人"><figcaption>可以依赖爱人</figcaption></figure>
+        <figure class="shot"><img src="assets/script/s3.jpg" alt="话术实录 · 如果你不好了那就是我没对你好，我会永远倾听你说的话"><figcaption>我会永远倾听</figcaption></figure>
+        <figure class="shot"><img src="assets/script/s4.jpg" alt="话术实录 · 如果明天是世界末日，我会想去你身边"><figcaption>世界末日也想见你</figcaption></figure>
+        <figure class="shot wide"><img src="assets/script/s5.jpg" alt="话术实录 · 你是我的阿司匹林，我的常备药"><figcaption>你是我的阿司匹林</figcaption></figure>
+        <figure class="shot wide"><img src="assets/script/s6.jpg" alt="话术随笔 · 亲爱的不要去担心之后怎样，至少此刻我们是相爱的"><figcaption>至少此刻我们是相爱的</figcaption></figure>
+        <figure class="shot wide"><img src="assets/script/s7.jpg" alt="话术随笔 · 我不是想让你感到疼痛，我会把概率降到最低"><figcaption>疼的那段我陪着</figcaption></figure>
+        <figure class="shot"><img src="assets/script/s8.jpg" alt="话术实录 · 世界不管怎么变化我都不会离开，哪怕变成小鸟也和你飞在一起"><figcaption>变成小鸟也一起飞</figcaption></figure>
+      </div>
+      <div class="doc-links" data-fx>
+        <a class="doc-link" href="https://www.kdocs.cn/l/ctO6dZJUARjb" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆话术 · 完整文档</span><span class="go">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷七</span> 板评 // REVIEWS</div>
+      <h2 class="title" data-fx>来自星星的<b>评价</b></h2>
+      <p class="lead" data-fx><i>＞＞＞</i> 每一条评价，都是一次露水相逢的回声。</p>
+      <div class="review-wrap" data-fx>
+        <figure class="shot review-shot"><img src="assets/review/r1.jpg" alt="板评 · Free. 五星好评：想点虐恋的都去找阿枯，代入感超强，很会带动氛围，点过她好几单了，真的强推"></figure>
+        <div class="review-side">
+          <div class="lily">
+            <div class="en">“Five stars — 代入感超强，还很会带动氛围。”</div>
+            <div class="cn">点过好几单 · 真的强推 —— Free.</div>
+          </div>
+          <div class="sun-chip" style="margin-top:18px"><span>想点虐恋的，都去锁恋里面找阿枯！！！</span></div>
+        </div>
+      </div>
+      <div class="doc-links" data-fx>
+        <a class="doc-link" href="https://www.kdocs.cn/l/csHRNlvmt6qG" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆板评 · 完整文档</span><span class="go">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="cards">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷八</span> 卡类 // CARDS</div>
+      <h2 class="title" data-fx>两颗心，<b>合二为一</b></h2>
+      <p class="lead" data-fx><i>＞＞＞</i> 必须经过漫长の旅程，两颗心才能合二为一。</p>
+      <figure class="shot collage" data-fx><img src="assets/cards/collage.jpg" alt="卡类拼贴 · 必须经过漫长の旅程，两颗心才能合二为一 —— @阿枯"></figure>
+      <div class="confess" data-fx>
+        <p>表达自己是一件很难的事<br>爱你是一件很简单的事<br>对我来说<br><b>爱你比我重要</b></p>
+        <span class="at">—— @阿枯</span>
+      </div>
+      <div class="counter" data-fx>
+        <div class="c-cell"><b id="cd-d">--</b><span>天</span></div>
+        <div class="c-cell"><b id="cd-h">--</b><span>时</span></div>
+        <div class="c-cell"><b id="cd-m">--</b><span>分</span></div>
+        <div class="c-cell"><b id="cd-s">--</b><span>秒</span></div>
+      </div>
+      <p class="counter-cap" data-fx>自相遇那一刻起，一直在走</p>
+      <div class="doc-links" data-fx>
+        <a class="doc-link" href="https://www.kdocs.cn/l/ci5kbDOoQPBS" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>关于＆卡类 · 完整文档</span><span class="go">↗</span>
+        </a>
       </div>
     </section>
 

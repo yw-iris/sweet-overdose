@@ -538,6 +538,79 @@ body.archive-on .lead i{font-style:normal;color:var(--sun2);letter-spacing:.12em
 body.archive-on .motto.strike{text-decoration:line-through;text-decoration-color:rgba(154,149,126,.5);text-decoration-thickness:1.5px}
 body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不会消失';display:block;text-decoration:none;font-size:12px;letter-spacing:.2em;color:var(--dim2);margin-top:10px;font-family:'Noto Sans SC',sans-serif;font-weight:400}
 
+/* ---- 卷首 · 音乐行 ---- */
+.hero-music{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:10px 22px;
+  border:1px solid var(--line-mint);border-radius:999px;background:rgba(251,248,238,.9);
+  font-family:var(--serif);font-size:13.5px;letter-spacing:.16em;color:var(--deep);z-index:2;position:relative;
+  box-shadow:0 4px 14px rgba(60,50,30,.08)}
+.hero-music i{font-style:normal;color:var(--peach)}
+
+/* ---- 关于我 · 单选投票 ---- */
+.poll{margin-top:44px;max-width:560px;border:1px solid var(--line-mint);border-radius:18px;
+  background:rgba(251,248,238,.92);padding:26px 30px;box-shadow:var(--soft)}
+.poll-q{display:flex;align-items:center;gap:12px;font-family:'Noto Serif SC',serif;font-weight:700;
+  font-size:clamp(17px,2.2vw,21px);color:var(--txt);letter-spacing:.08em}
+.poll-q .pt{font-family:'Noto Sans SC',sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;
+  color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:3px 8px;background:rgba(255,255,255,.7)}
+.poll-opt{display:flex;align-items:center;gap:12px;margin-top:14px;padding:12px 16px;
+  border-radius:10px;background:rgba(95,122,82,.07);font-family:'Noto Sans SC',sans-serif;
+  font-size:15px;letter-spacing:.1em;color:var(--txt)}
+.poll-opt i{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--mint2);flex:none;background:#fff}
+.poll-hint{margin-top:16px;font-family:'Noto Sans SC',sans-serif;font-size:12px;letter-spacing:.14em;
+  color:var(--dim2);line-height:2}
+
+/* ---- 须知 · ▸ 条款与心愿清单 ---- */
+.rules{list-style:none;margin-top:26px;max-width:720px}
+.rules li{font-family:'Noto Serif SC',serif;font-size:clamp(13.5px,1.7vw,16px);letter-spacing:.06em;
+  color:var(--txt);line-height:1.9;padding:10px 2px 10px 26px;position:relative;
+  border-bottom:1px solid rgba(95,122,82,.16);text-decoration:underline;
+  text-decoration-color:rgba(95,122,82,.28);text-decoration-thickness:1px;text-underline-offset:5px}
+.rules li::before{content:'▸';position:absolute;left:2px;color:var(--sun2)}
+.rules-note{margin-top:14px;text-align:right;max-width:720px;font-family:'Noto Serif SC',serif;
+  font-size:13.5px;letter-spacing:.2em;color:var(--deep)}
+.wishes{margin-top:44px;display:flex;flex-direction:column;gap:14px;max-width:420px}
+.wish{display:flex;align-items:center;gap:14px;font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  letter-spacing:.14em;color:var(--dim)}
+.wish i{width:15px;height:15px;border:1.5px solid var(--mint2);border-radius:4px;flex:none;background:#fff}
+
+/* ---- 话术 · 截图画廊 ---- */
+.gallery{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}
+.shot{background:#fbf8ee;border:1px solid rgba(95,122,82,.22);padding:10px 10px 8px;
+  box-shadow:0 10px 24px rgba(60,50,30,.14);border-radius:6px;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.shot:hover{transform:translateY(-5px) rotate(-.6deg)}
+.shot img{width:100%;display:block;border-radius:3px}
+.shot figcaption{font-family:'Noto Serif SC',serif;font-size:11.5px;letter-spacing:.2em;color:var(--dim);
+  text-align:center;padding-top:8px}
+.shot.tall{grid-row:span 2}
+.shot.wide{grid-column:span 2}
+.shot.tall img{max-height:460px;object-fit:cover}
+
+/* ---- 板评 ---- */
+.review-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;margin-top:34px;align-items:center}
+@media(max-width:860px){.review-wrap{grid-template-columns:1fr}}
+.review-shot{max-width:560px}
+
+/* ---- 卡类 ---- */
+.shot.collage{margin-top:30px}
+.collage img{width:100%;max-width:720px}
+.confess{margin-top:34px;text-align:center;font-family:'Noto Serif SC',serif;
+  font-size:clamp(15px,2vw,19px);letter-spacing:.18em;line-height:2.3;color:var(--txt)}
+.confess b{color:var(--sun2);font-weight:700}
+.confess .at{display:block;margin-top:14px;font-size:12.5px;letter-spacing:.3em;color:var(--dim2)}
+.counter{margin-top:40px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.c-cell{min-width:86px;padding:16px 10px 12px;border:1px solid var(--line-mint);border-radius:12px;
+  background:rgba(251,248,238,.94);text-align:center;box-shadow:var(--soft)}
+.c-cell b{display:block;font-family:var(--mono);font-size:clamp(24px,3.4vw,34px);color:var(--deep);
+  letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.c-cell span{display:block;margin-top:6px;font-family:'Noto Serif SC',serif;font-size:12px;
+  letter-spacing:.3em;color:var(--dim)}
+.counter-cap{margin-top:16px;text-align:center;font-family:'Noto Serif SC',serif;font-size:12.5px;
+  letter-spacing:.28em;color:var(--dim2)}
+
+/* 新增便签位置 */
+.n6{right:-62px;bottom:2%;transform:rotate(6deg)}
+.n7{left:-84px;bottom:-56px;transform:rotate(-7deg)}
+
 /* ═══════ 手机横屏适配 ═══════ */
 @media (orientation:landscape) and (max-height:560px){
   #desk{padding:10px 16px 14px}
@@ -559,6 +632,7 @@ body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不
   body.archive-on main section{padding:46px 18px!important}
   #hero{justify-content:center;min-height:auto;overflow:visible;padding:44px 18px}
   .hero-strike{gap:6px;margin:4px 0 12px}
+  .hero-strike span{display:inline;margin-right:18px}
   h1.hero-t{font-size:clamp(28px,6.5vw,48px);line-height:1.28}
   .hero-quote{margin-top:18px}
   .profile,.rain-wrap{grid-template-columns:1fr 1fr;gap:20px}
@@ -568,6 +642,17 @@ body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不
   #back-desk{top:10px;left:10px;padding:7px 12px;font-size:12px}
   .scroll-hint{display:none}
   .footer{padding:18px 12px}
+  .gallery{grid-template-columns:repeat(4,1fr);gap:12px}
+  .shot.tall img{max-height:300px}
+  .review-wrap{grid-template-columns:1fr 1fr;gap:20px}
+  .rules{columns:2;column-gap:28px;max-width:none}
+  .rules li{break-inside:avoid}
+  .wishes{flex-direction:row;flex-wrap:wrap;gap:10px 22px}
+  .counter{gap:8px}
+  .c-cell{min-width:64px;padding:10px 6px 8px}
+  .c-cell b{font-size:20px}
+  .poll{max-width:none;padding:16px 18px}
+  .confess{line-height:1.9}
 }
 @media (orientation:landscape) and (max-height:430px){
   section{padding:38px 16px!important}
@@ -575,4 +660,12 @@ body.archive-on .motto.strike::after{content:'—— 但它写在这里，就不
   .story-row{grid-template-columns:1fr}
   h1.hero-t{font-size:clamp(24px,5.5vw,40px)}
   .card-img{height:120px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .shot.tall{grid-row:auto}
+  .shot.wide{grid-column:auto}
+  .shot.tall img{max-height:220px}
+  .review-wrap{grid-template-columns:1fr}
+  .rules{columns:1}
+  .letter-v{max-height:180px;font-size:14px!important}
+  .hero-strike span{font-size:11px;margin-right:10px}
 }
