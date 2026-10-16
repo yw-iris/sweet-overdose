@@ -105,8 +105,8 @@ section{min-height:100vh;display:flex;flex-direction:column;justify-content:cent
 
 /* ===== hero ===== */
 #hero{align-items:center;text-align:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-4%;background:url('river.jpg') center 42%/cover no-repeat;
-  opacity:.34;filter:saturate(1.15) brightness(1.06);z-index:0;
+.hero-bg{position:absolute;inset:-4%;background:url('hero-bg.jpg') center 30%/cover no-repeat;
+  opacity:.4;filter:saturate(1.1) brightness(1.08);z-index:0;
   -webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 96%);
   mask-image:linear-gradient(180deg,#000 45%,transparent 96%)}
 .sunburst{position:absolute;width:150vmax;height:150vmax;left:50%;top:52%;transform:translate(-50%,-50%);
