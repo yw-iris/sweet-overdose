@@ -251,10 +251,10 @@ body{-webkit-tap-highlight-color:transparent}
 .cl-tab{position:absolute;left:6px;top:-16px;z-index:8;background:#2b2b26;color:#f6f3ea;
   font-family:'Share Tech Mono',monospace;font-size:9.5px;letter-spacing:.22em;padding:7px 14px;
   transform:rotate(-2deg);box-shadow:0 4px 10px rgba(0,0,0,.25)}
-.cl-grid{display:grid;grid-template-columns:256px minmax(0,1fr) 300px;gap:28px;align-items:start;padding-top:16px}
-.cl-col{display:flex;flex-direction:column;gap:24px}
-.cl-col-l{margin-top:30px}
-.cl-col-r{margin-top:44px}
+.cl-grid{display:grid;grid-template-columns:262px minmax(0,1fr) 292px;gap:16px;align-items:start;padding-top:16px}
+.cl-col{display:flex;flex-direction:column;gap:12px}
+.cl-col-l{margin-top:12px}
+.cl-col-r{margin-top:12px}
 
 /* 中栏：牛皮纸 + 米绿纸垫底的大档案卡 */
 .cl-center{position:relative;padding:40px 10px 54px}
@@ -301,17 +301,17 @@ body{-webkit-tap-highlight-color:transparent}
   box-shadow:0 3px 6px rgba(0,0,0,.28)}
 .clip::after{content:'';position:absolute;left:50%;top:6px;transform:translateX(-50%);width:14px;height:8px;
   border:2px solid rgba(255,255,255,.78);border-bottom:none;border-radius:8px 8px 0 0}
-.ph1{transform:rotate(-3deg)}
-.ph1 img{height:190px;object-fit:cover}
-.ph2{transform:rotate(2.5deg);cursor:default}
-.ph2 img{height:156px;object-fit:cover}
-.ph2:hover{transform:rotate(2.5deg)}
-.ph3{transform:rotate(-2.5deg)}
-.ph3 img{height:156px;object-fit:cover}
+.ph1{transform:rotate(-1.6deg)}
+.ph1 img{height:198px;object-fit:cover}
+.ph2{transform:rotate(1.4deg);cursor:default}
+.ph2 img{height:150px;object-fit:cover}
+.ph2:hover{transform:rotate(1.4deg)}
+.ph3{transform:rotate(-1.4deg)}
+.ph3 img{height:172px;object-fit:cover}
 
-.cl-postcard{position:relative;width:100%;transform:rotate(2deg);z-index:4;
+.cl-postcard{position:relative;width:100%;transform:rotate(1.2deg);z-index:4;
   background:#fbf8ee;padding:9px;box-shadow:0 10px 22px rgba(60,50,30,.28);cursor:pointer;transition:transform .3s,box-shadow .3s;margin:0}
-.cl-postcard img{width:100%;height:172px;object-fit:cover;display:block}
+.cl-postcard img{width:100%;height:252px;object-fit:cover;display:block}
 .pc-tx{padding:10px 6px 6px;text-align:center}
 .pc-tx b{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:#2f5a3c;display:block}
 .pc-tx span{font-family:'Noto Sans SC',sans-serif;font-size:11.5px;letter-spacing:.08em;color:#6b6a58;display:block;margin-top:5px;line-height:1.7}
@@ -333,10 +333,17 @@ body{-webkit-tap-highlight-color:transparent}
 .ent.sn1{transform:rotate(-2deg)}
 .ent.sn2{transform:rotate(2deg)}
 .ent.sn3{transform:rotate(-2.5deg)}
-.ent-tag{transform:rotate(-2.5deg)}
-.cl-bottom{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;
-  justify-items:center;padding:16px 34px 0}
-.cl-bottom .ent{width:min(100%,264px)}
+.ent-tag{transform:rotate(1deg)}
+.ent-tag img{height:250px}
+.cl-bottom{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  justify-items:stretch;padding:18px 2px 0}
+.cl-bottom .ent{width:100%;display:flex;flex-direction:column-reverse;transform:rotate(0)}
+.cl-bottom .ent img{height:178px}
+.cl-bottom .ent span{font-family:'Share Tech Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  text-align:left;padding:10px 4px 8px;border-bottom:1px dashed #d8d2c2;color:#4a4632}
+.cl-bottom .ent.sn1{transform:rotate(-.6deg)}
+.cl-bottom .ent.sn2{transform:rotate(.5deg)}
+.cl-bottom .ent.sn3{transform:rotate(-.5deg)}
 
 .mini-poster{display:flex;flex-direction:column;align-items:center;gap:8px;background:#f2edda;border:1px solid #d8d2c2;
   padding:20px 14px;text-align:center;box-shadow:3px 5px 0 rgba(43,43,38,.14);cursor:pointer;transition:all .3s;
@@ -403,6 +410,11 @@ body{-webkit-tap-highlight-color:transparent}
   .cl-postcard{position:static;transform:rotate(1.5deg);width:280px;order:3}
   .ent{position:static;display:inline-block;margin:5px;transform:rotate(-2deg)!important;width:auto;order:4}
   .ent img{height:118px}
+  .cl-postcard img{height:170px}
+  .cl-bottom .ent{display:inline-block;width:auto;flex-direction:column}
+  .cl-bottom .ent img{height:118px}
+  .cl-bottom .ent span{font-family:'Noto Sans SC',sans-serif;font-size:12px;letter-spacing:.04em;
+    text-align:center;padding:9px 6px 5px;border-bottom:none}
   .note{position:static;display:inline-block;margin:4px;transform:rotate(-2deg)!important;width:auto;order:5}
   .tabs{order:3;width:100%;justify-content:flex-start}
   #desk-top{flex-direction:column}
