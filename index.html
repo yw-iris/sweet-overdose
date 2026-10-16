@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=16">
+<link rel="stylesheet" href="assets/style.css?v=17">
 </head>
 <body class="desk-on">
 
@@ -48,53 +48,70 @@
 
     <div class="stack">
       <span class="cl-tab">OPEN · 常驻在线</span>
-      <div class="cl-sheet sk"></div>
-      <div class="cl-sheet ss"></div>
 
-      <figure class="cl-photo ph1" data-go="about">
-        <i class="clip"></i>
-        <img src="assets/river.jpg" alt="溪水慢流">
-        <span>关于我 · 溪水慢流</span>
-      </figure>
-      <figure class="cl-photo ph2">
-        <i class="clip"></i>
-        <img src="assets/sparkle.jpg" alt="小灯之海">
-        <span>sea of small lights</span>
-      </figure>
-      <figure class="cl-photo ph3">
-        <i class="clip"></i>
-        <img src="assets/blossom.jpg" alt="花市 · copenhagen">
-        <span>flower market · copenhagen</span>
-      </figure>
-
-      <article class="cl-main">
-        <span class="tape t1"></span><span class="tape t2"></span>
-        <h1>Green Archive</h1>
-        <p>这里收着阿枯的一点信号：一句话、一张图、一个树洞。鼠尾草绿配米黄纸，像檐下晒着的午后。</p>
-        <p>它是一个小小的提醒架：细腻的你，也有自己的珍贵；露水相逢，就算是缘分。</p>
-        <dl>
-          <div><dt>档案编号</dt><dd>GA-2026-09</dd></div>
-          <div><dt>馆主</dt><dd>阿枯 · 白羊 / ENFP / 双 / 20</dd></div>
-          <div><dt>风格一览</dt><dd>高恋日常 / 温柔文艺 / 引导·白骑士·自虐</dd></div>
-          <div><dt>收录内容</dt><dd>树洞 / 关于我 / 须知 / 话术 / 板评 / 卡类</dd></div>
-          <div><dt>状态</dt><dd>常驻 · 在线 · 檐下灯常明</dd></div>
-        </dl>
-        <a class="handle" data-go="about">入座 · 关于我</a>
-      </article>
-
-      <figure class="cl-postcard" data-go="hole">
-        <img src="assets/rain-flower.jpg" alt="雨窗白花">
-        <div class="pc-tx">
-          <b>POSTCARD · FROM 座隅</b>
-          <span>树洞 · 雨天常年开放，心事都会被接住</span>
+      <div class="cl-grid">
+        <!-- 左栏：三张夹子照片竖叠 -->
+        <div class="cl-col cl-col-l">
+          <figure class="cl-photo ph1" data-go="about">
+            <i class="clip"></i>
+            <img src="assets/river.jpg" alt="溪水慢流">
+            <span>关于我 · 溪水慢流</span>
+          </figure>
+          <figure class="cl-photo ph2">
+            <i class="clip"></i>
+            <img src="assets/sparkle.jpg" alt="小灯之海">
+            <span>sea of small lights</span>
+          </figure>
+          <figure class="cl-photo ph3">
+            <i class="clip"></i>
+            <img src="assets/blossom.jpg" alt="花市 · copenhagen">
+            <span>flower market · copenhagen</span>
+          </figure>
         </div>
-      </figure>
 
-      <a class="ent sn1" data-go="notice"><img src="assets/bamboo-water.jpg" alt="须知"><span>须知 · 入座前请先过目</span></a>
-      <a class="ent sn2" data-go="script"><img src="assets/ripple-grass.jpg" alt="话术"><span>话术 · 聊天实录八则 →</span></a>
-      <a class="ent sn3" data-go="reviews"><img src="assets/ripple-flower.jpg" alt="板评"><span>板评 · 来自星星的评价 ✦</span></a>
+        <!-- 中栏：牛皮纸垫底的档案大卡 -->
+        <div class="cl-center">
+          <div class="cl-sheet sk"></div>
+          <div class="cl-sheet ss"></div>
+          <article class="cl-main">
+            <i class="big-clip"></i>
+            <span class="tape t1"></span><span class="tape t2"></span>
+            <h1>Green Archive</h1>
+            <p>这里收着阿枯的一点信号：一句话、一张图、一个树洞。鼠尾草绿配米黄纸，像檐下晒着的午后。</p>
+            <p>它是一个小小的提醒架：细腻的你，也有自己的珍贵；露水相逢，就算是缘分。</p>
+            <dl>
+              <div><dt>档案编号</dt><dd>GA-2026-09</dd></div>
+              <div><dt>馆主</dt><dd>阿枯 · 白羊 / ENFP / 双 / 20</dd></div>
+              <div><dt>风格一览</dt><dd>高恋日常 / 温柔文艺 / 引导·白骑士·自虐</dd></div>
+              <div><dt>收录内容</dt><dd>树洞 / 关于我 / 须知 / 话术 / 板评 / 卡类</dd></div>
+              <div><dt>状态</dt><dd>常驻 · 在线 · 檐下灯常明</dd></div>
+            </dl>
+            <a class="handle" data-go="about">入座 · 关于我</a>
+            <span class="cl-round">常驻<b>·</b>在线</span>
+          </article>
+          <div class="cl-sticky">细腻的你，<br>也有自己的珍贵。</div>
+          <span class="cl-under">SEATED WITH CURIOSITY · 入座请慢一点</span>
+        </div>
 
-      <a class="ent ent-tag" data-go="cards"><img src="assets/water-strip.jpg" alt="卡类"><span>卡类 · 两颗心，合二为一 →</span></a>
+        <!-- 右栏：明信片 + 卡类海报 -->
+        <div class="cl-col cl-col-r">
+          <figure class="cl-postcard" data-go="hole">
+            <img src="assets/rain-flower.jpg" alt="雨窗白花">
+            <div class="pc-tx">
+              <b>POSTCARD · FROM 座隅</b>
+              <span>树洞 · 雨天常年开放，心事都会被接住</span>
+            </div>
+          </figure>
+          <a class="ent ent-tag" data-go="cards"><img src="assets/water-strip.jpg" alt="卡类"><span>卡类 · 两颗心，合二为一 →</span></a>
+        </div>
+
+        <!-- 底排：三个图片入口 -->
+        <div class="cl-bottom">
+          <a class="ent sn1" data-go="notice"><img src="assets/bamboo-water.jpg" alt="须知"><span>须知 · 入座前请先过目</span></a>
+          <a class="ent sn2" data-go="script"><img src="assets/ripple-grass.jpg" alt="话术"><span>话术 · 聊天实录八则 →</span></a>
+          <a class="ent sn3" data-go="reviews"><img src="assets/ripple-flower.jpg" alt="板评"><span>板评 · 来自星星的评价 ✦</span></a>
+        </div>
+      </div>
 
       <div class="cl-receipt">THIS ARCHIVE IS A LIVING SYSTEM — 檐下灯常明 · 慢一点，也没关系</div>
     </div>
@@ -114,7 +131,6 @@
         <em>Direction</em><u>over</u><b>SPEED</b>
         <span>Enjoy the Journey!</span>
       </div>
-      <a class="note g w3" data-go="notice">海龟的提醒：<br>方向 ＞ 速度</a>
       <a class="note y w4">ARCHIVE RULES:<br>do not rush · let it rest ·<br>grow every spring ~</a>
       <div class="polaroid r-2"><img src="assets/water-strip.jpg" alt=""><span>潮汐拼贴 · tide strips</span></div>
       <div class="polaroid r1"><img src="assets/rain-flower.jpg" alt=""><span>small green window</span></div>
