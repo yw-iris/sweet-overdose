@@ -357,7 +357,6 @@ h1.hero-t span.g::after{background:rgba(255,179,167,.4)}
   z-index:1600;transition:all .4s;pointer-events:none}
 #toast.show{opacity:1;transform:translateX(-50%)}
 .petal{position:fixed;top:-5vh;z-index:3;pointer-events:none;opacity:.8;animation:fall linear infinite}
-.petal.leaf{border-radius:80% 20% 70% 30%/70% 30% 70% 30%}
 @keyframes fall{
   0%{transform:translateY(-6vh) translateX(0) rotate(0deg)}
   50%{transform:translateY(52vh) translateX(var(--sway,40px)) rotate(280deg)}

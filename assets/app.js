@@ -90,13 +90,12 @@ function spawnSugar() {
   if (box.childElementCount) return;
   const sugar = ['linear-gradient(135deg,#eafaf3,#ffffff)', 'linear-gradient(135deg,#fff3d6,#fffaf0)', 'linear-gradient(135deg,#ffdfe4,#fff6f4)'];
   for (let i = 0; i < 18; i++) {
-    const p = document.createElement('i'); p.className = 'petal' + (i % 4 === 0 ? ' leaf' : '');
-    const s = 7 + Math.random() * 10;
-    const bg = (i % 4 === 0) ? 'linear-gradient(135deg,#8fe3c8,#3fae8f)' : sugar[i % 3];
-    p.style.cssText = `left:${Math.random() * 100}vw;width:${s}px;height:${s * 1.25}px;
-      background:${bg};--sway:${(Math.random() * 90 + 30) * (Math.random() < .5 ? -1 : 1)}px;
+    const p = document.createElement('i'); p.className = 'petal';
+    const s = 7 + Math.random() * 9;
+    p.style.cssText = `left:${Math.random() * 100}vw;width:${s}px;height:${s}px;
+      background:${sugar[i % 3]};--sway:${(Math.random() * 90 + 30) * (Math.random() < .5 ? -1 : 1)}px;
       animation-duration:${9 + Math.random() * 8}s;animation-delay:${-Math.random() * 14}s;
-      opacity:${.45 + Math.random() * .4};border-radius:${i % 3 === 0 ? '50%' : ''}`;
+      opacity:${.45 + Math.random() * .4};border-radius:50%`;
     box.appendChild(p);
   }
 }
