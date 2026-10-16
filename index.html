@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=13">
+<link rel="stylesheet" href="assets/style.css?v=14">
 </head>
 <body class="desk-on">
 
@@ -41,23 +41,36 @@
     </div>
   </header>
 
-  <!-- ── INDEX MODE ── -->
+  <!-- ── INDEX MODE · 拼贴堆叠桌面 ── -->
   <div class="board-index">
-    <div class="col-left">
-      <div class="mini-poster pm-flower">
-        <b>FLOWER MARKET</b>
-        <span>COPENHAGEN · COLLECTION No.4</span>
-      </div>
-      <div class="mini-poster pm-steps">
-        <b>SMALL STEPS</b>
-        <em>big difference</em>
-        <span>EVERY GREEN COUNTS</span>
-      </div>
+    <div class="cl-head">
+      <b>SWEET OVERDOSE</b>
+      <span>過 於 依 賴 妳 也 怪 我 嗎 · 阿 枯 的 座 隅</span>
     </div>
 
-    <div class="kraft">
-      <span class="tape t1"></span><span class="tape t2"></span><span class="tape t3"></span>
-      <div class="arch-card">
+    <div class="stack">
+      <span class="cl-tab">OPEN · 常驻在线</span>
+      <div class="cl-sheet sk"></div>
+      <div class="cl-sheet ss"></div>
+
+      <figure class="cl-photo ph1" data-go="about">
+        <i class="clip"></i>
+        <img src="assets/river.jpg" alt="溪水慢流">
+        <span>关于我 · 溪水慢流</span>
+      </figure>
+      <figure class="cl-photo ph2">
+        <i class="clip"></i>
+        <img src="assets/sparkle.jpg" alt="小灯之海">
+        <span>sea of small lights</span>
+      </figure>
+      <figure class="cl-photo ph3" data-go="dream">
+        <i class="clip"></i>
+        <img src="assets/blossom.jpg" alt="花开雨后">
+        <span>梦境 · 花开雨后</span>
+      </figure>
+
+      <article class="cl-main">
+        <span class="tape t1"></span><span class="tape t2"></span>
         <h1>Green Archive</h1>
         <p>这里收着阿枯的一点信号：一句话、一张图、一个树洞。鼠尾草绿配米黄纸，像檐下晒着的午后。</p>
         <p>它是一个小小的提醒架：细腻的你，也有自己的珍贵；露水相逢，就算是缘分。</p>
@@ -69,67 +82,27 @@
           <div><dt>状态</dt><dd>常驻 · 在线 · 檐下灯常明</dd></div>
         </dl>
         <a class="handle" data-go="hero">入座 · 进卷首</a>
-      </div>
-      <a class="note y n1" data-go="hole">树洞 · 心事整段丢进来，都会被接住</a>
-      <a class="note g n2" data-go="dream">梦境 · 拾一枚梦境样本 →</a>
-      <a class="note y n3" data-go="notice">须知 · 入座前请先过目</a>
-      <a class="note g n5" data-go="about">关于我 · 细腻的你也是珍贵的 ✦</a>
-      <a class="note y n4" data-go="script">话术 · 聊天实录八则 →</a>
-      <a class="note g n6" data-go="reviews">板评 · 来自星与评价 →</a>
-      <a class="note y n7" data-go="cards">卡类 · 两颗心合二为一 →</a>
-      <span class="stamp">常驻 · 在线</span>
-    </div>
+      </article>
 
-    <div class="col-right">
-      <div class="side-head"><b>PAPER INDEX</b><span>GREEN / CREAM / MOSS</span></div>
-      <div class="mod-index">
-        <a class="mi"><img src="assets/river.jpg" alt=""><span>MORRIS · LEAVES</span></a>
-        <a class="mi"><img src="assets/sparkle.jpg" alt=""><span>MATISSE · CUTOUTS</span></a>
-        <a class="mi"><img src="assets/blossom.jpg" alt=""><span>BLOSSOM STUDY</span></a>
-        <a class="mi"><img src="assets/rain-flower.jpg" alt=""><span>WINDOW · RAIN</span></a>
-      </div>
-      <div class="manifesto">
-        <b>MY MANIFESTO</b>
-        <div class="mini-poster pm-turtle">
-          <em>Direction</em>
-          <u>over</u>
-          <b>SPEED</b>
-          <span>Enjoy the Journey!</span>
+      <figure class="cl-postcard" data-go="hole">
+        <img src="assets/rain-flower.jpg" alt="雨窗白花">
+        <div class="pc-tx">
+          <b>POSTCARD · FROM 座隅</b>
+          <span>树洞 · 雨天常年开放，心事都会被接住</span>
         </div>
-        <div class="mf-list">
-          <div><b>露水相逢</b><span>座隅已开 · 等一个慢慢说话的人</span></div>
-          <div><b>方向 &gt; 速度</b><span>慢一点，也没关系</span></div>
-          <p>细腻的你，唯独没看到自己的珍贵</p>
-        </div>
-      </div>
-    </div>
+      </figure>
 
-    <div class="story-row">
-      <div class="story-block">
-        <div class="sb-head"><b>ARCHIVE STORYBOARDS</b><span>LEAVES / SEQUENCE</span></div>
-        <div class="sb-tri">
-          <img src="assets/hero-bg.jpg" alt="">
-          <img src="assets/blossom.jpg" alt="">
-          <img src="assets/river.jpg" alt="">
-        </div>
-      </div>
-      <div class="mini-poster pm-slow">
-        <b>SLOW<br>DOWN</b>
-        <em>YOU'RE DOING FINE</em>
-        <span>EVENT GUIDE — MAKING ROOM FOR SLOWNESS</span>
-      </div>
-      <div class="polaroid ph-bot">
-        <img src="assets/rain-flower.jpg" alt="">
-        <span>BOTANICAL PLATE I</span>
-      </div>
-      <div class="misc">
-        <b>UNCLOSED · MISC</b>
-        <div class="tag-row">
-          <div class="tag-card"><i>NO.01</i><span>OPEN ANYTIME</span></div>
-          <div class="tag-card"><i>NO.02</i><span>STILL GROWING</span></div>
-          <div class="tag-card"><i>NO.03</i><span>IN PROGRESS<br>NOT FOR SALE</span></div>
-        </div>
-      </div>
+      <a class="note y sn1" data-go="notice">须知 · 入座前请先过目</a>
+      <a class="note g sn2" data-go="script">话术 · 聊天实录八则 →</a>
+      <a class="note y sn3" data-go="reviews">板评 · 来自星星的评价 ✦</a>
+
+      <a class="cl-tag" data-go="cards">
+        <i class="hole"></i>
+        <b>卡类</b>
+        <span>两颗心，合二为一 →</span>
+      </a>
+
+      <div class="cl-receipt">THIS ARCHIVE IS A LIVING SYSTEM — 檐下灯常明 · 慢一点，也没关系</div>
     </div>
   </div>
 
