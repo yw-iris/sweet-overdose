@@ -71,13 +71,13 @@
     DPR = Math.min(devicePixelRatio || 1, 2);
     W = cv.width = innerWidth * DPR; H = cv.height = innerHeight * DPR;
     cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
-    parts = [...Array(74)].map(() => ({
+    parts = [...Array(34)].map(() => ({
       x: Math.random() * W, y: Math.random() * H,
       r: (Math.random() * 2 + .7) * DPR,
       vy: -(Math.random() * .3 + .08) * DPR,
       vx: (Math.random() - .5) * .18 * DPR,
       c: Math.random() < .34 ? '217,168,78' : (Math.random() < .55 ? '143,174,126' : '201,122,90'),
-      a: Math.random() * .45 + .18, tw: Math.random() * Math.PI * 2
+      a: Math.random() * .3 + .14, tw: Math.random() * Math.PI * 2
     }));
   }
   resize(); addEventListener('resize', resize);
@@ -110,7 +110,7 @@ function spawnSugar() {
   const box = document.getElementById('petals');
   if (!box || box.childElementCount) return;
   const sugar = ['linear-gradient(135deg,#f6f1de,#ffffff)', 'linear-gradient(135deg,#f3e3b8,#fbf4de)', 'linear-gradient(135deg,#e8cdb8,#f7ece2)'];
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < 8; i++) {
     const p = document.createElement('i'); p.className = 'petal';
     const s = 7 + Math.random() * 9;
     p.style.cssText = `left:${Math.random() * 100}vw;width:${s}px;height:${s}px;
