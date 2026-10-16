@@ -3,196 +3,329 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>過於依賴妳也怪我嗎 · 阿枯</title>
-<meta name="description" content="阿枯 · 座隅 —— 過於依賴妳也怪我嗎。">
+<title>Green Archive · 阿枯</title>
+<meta name="description" content="Green Archive — the quiet botanical bureau. 慢一点，也没关系。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600&family=Noto+Sans+SC:wght@300;400;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="locked">
+<body class="desk-on">
 
-<canvas id="bg"></canvas>
-<div id="grid"></div>
-<div id="cur"></div>
-<div id="prog"></div>
+<!-- ═══════════ 视图 A · 档案桌面（主页） ═══════════ -->
+<div id="desk" class="mode-index">
 
-<div id="hud">
-  <span>阿枯 · 座隅</span><span class="r">//</span>
-  <span>過於依賴妳也怪我嗎</span>
-  <span style="margin-left:auto" id="hud-sec">卷首</span>
+  <header id="desk-top">
+    <div class="logo-card" data-go="hero">
+      <b>GREEN ARCHIVE</b>
+      <i>( BOTANICAL POSTERS )</i>
+      <span>COLLECTION</span>
+    </div>
+    <nav class="tabs">
+      <a class="on" data-go="hero"><b>01</b> INDEX</a>
+      <a data-go="dream"><b>02</b> POSTERS</a>
+      <a data-go="hole"><b>03</b> WORDS</a>
+      <a data-go="about"><b>04</b> NOTES</a>
+      <a data-go="notice"><b>05</b> CONTACT</a>
+    </nav>
+    <div class="mode-panel">
+      <span class="mp-t">MODE <i>✦</i></span>
+      <div class="mp-row">
+        <button class="on" data-mode="index">INDEX MODE</button>
+        <button data-mode="wall">DESK</button>
+      </div>
+      <span class="mp-hint">两种墙面 · 点便签进入内页</span>
+    </div>
+  </header>
+
+  <!-- ── INDEX MODE ── -->
+  <div class="board-index">
+    <div class="col-left">
+      <div class="mini-poster pm-flower" data-go="about">
+        <b>FLOWER MARKET</b>
+        <div class="mp-art">✿ ❀ ✿<br>❀ ✿ ❀<br>✿ ❀ ✿</div>
+        <span>COPENHAGEN · COLLECTION No.4</span>
+      </div>
+      <div class="mini-poster pm-steps" data-go="memo">
+        <b>SMALL STEPS</b>
+        <em>big difference</em>
+        <div class="mp-art">🍃 🍃 🍃</div>
+        <span>EVERY GREEN COUNTS</span>
+      </div>
+    </div>
+
+    <div class="kraft">
+      <span class="tape t1"></span><span class="tape t2"></span><span class="tape t3"></span>
+      <div class="arch-card">
+        <h1>Green Archive</h1>
+        <p>I collect quiet green things — botanical patterns, kind words, and posters that ask you to slow down. This archive keeps them together, sage against cream, moss against paper.</p>
+        <p>It is a small shelf of reminders: small steps still count, direction matters more than speed, and sensitive souls see more.</p>
+        <dl>
+          <div><dt>ARCHIVE NO.</dt><dd>GA-2026-09</dd></div>
+          <div><dt>CURATOR</dt><dd>阿枯 · 白羊 / ENFP / 双 / 20</dd></div>
+          <div><dt>DISCIPLINES</dt><dd>BOTANICAL / TYPOGRAPHY / POSTER</dd></div>
+          <div><dt>TOOLS</dt><dd>COLLECTING / WRITING / ARRANGING</dd></div>
+          <div><dt>STATUS</dt><dd>IN PROGRESS — ALWAYS CURIOUS</dd></div>
+        </dl>
+        <a class="handle" data-go="hero">HANDLE WITH CURIOSITY</a>
+      </div>
+      <a class="note y n1" data-go="hole">how do posters make a room feel a little quieter?</a>
+      <a class="note g n2" data-go="dream">collect slow moments →</a>
+      <a class="note y n3" data-go="notice">which green is your favorite?</a>
+      <a class="note y n4" data-go="memo">made with patience, not for speed ☺</a>
+      <a class="note g n5" data-go="about">small steps, quiet power ✦</a>
+      <span class="stamp">ALWAYS CURIOUS</span>
+    </div>
+
+    <div class="col-right">
+      <div class="side-head"><b>PAPER INDEX</b><span>GREEN / CREAM / MOSS</span></div>
+      <div class="mod-index">
+        <a class="mi" data-go="dream"><img src="assets/river.jpg" alt=""><span>MORRIS · LEAVES</span></a>
+        <a class="mi" data-go="dream"><img src="assets/sparkle.jpg" alt=""><span>MATISSE · CUTOUTS</span></a>
+        <a class="mi" data-go="dream"><img src="assets/blossom.jpg" alt=""><span>BLOSSOM STUDY</span></a>
+        <a class="mi" data-go="dream"><img src="assets/rain-flower.jpg" alt=""><span>WINDOW · RAIN</span></a>
+      </div>
+      <div class="manifesto">
+        <b>MY MANIFESTO</b>
+        <div class="mini-poster pm-turtle" data-go="notice">
+          <em>Direction</em>
+          <u>over</u>
+          <b>SPEED</b>
+          <span>🐢 Enjoy the Journey!</span>
+        </div>
+        <div class="mf-list">
+          <div><b>SLOW DOWN</b><span>ADMIT ONE · NOW G ▷ 12</span></div>
+          <div><b>DIRECTION OVER SPEED</b><span>GALLERY 07 · NO RUSH</span></div>
+          <p>THE JOURNEY IS THE POINT</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-row">
+      <div class="story-block">
+        <div class="sb-head"><b>ARCHIVE STORYBOARDS</b><span>LEAVES / SEQUENCE</span></div>
+        <div class="sb-tri">
+          <img src="assets/hero-bg.jpg" alt="" data-go="dream">
+          <img src="assets/blossom.jpg" alt="" data-go="dream">
+          <img src="assets/river.jpg" alt="" data-go="dream">
+        </div>
+      </div>
+      <div class="mini-poster pm-slow" data-go="hole">
+        <b>SLOW<br>DOWN</b>
+        <em>YOU'RE DOING FINE</em>
+        <span>EVENT GUIDE — MAKING ROOM FOR SLOWNESS</span>
+      </div>
+      <div class="polaroid ph-bot" data-go="about">
+        <img src="assets/rain-flower.jpg" alt="">
+        <span>BOTANICAL PLATE I</span>
+      </div>
+      <div class="misc">
+        <b>UNCLOSED · MISC</b>
+        <div class="tag-row">
+          <a class="tag-card" data-go="about"><i>NO.01</i><span>OPEN ANYTIME</span></a>
+          <a class="tag-card" data-go="memo"><i>NO.02</i><span>STILL GROWING</span></a>
+          <a class="tag-card" data-go="notice"><i>NO.03</i><span>IN PROGRESS<br>NOT FOR SALE</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WALL MODE（DESK） ── -->
+  <div class="board-wall">
+    <h2 class="wall-title">GREEN ARCHIVE</h2>
+    <p class="wall-sub">the quiet botanical bureau — 慢一点，也没关系</p>
+    <div class="cork">
+      <div class="polaroid r-2" data-go="about"><img src="assets/river.jpg" alt=""><span>leaves, quietly growing</span></div>
+      <div class="polaroid r1" data-go="dream"><img src="assets/hero-bg.jpg" alt=""><span>blossom · after rain</span></div>
+      <div class="polaroid r-1" data-go="dream"><img src="assets/sparkle.jpg" alt=""><span>sea of small lights</span></div>
+      <a class="note y w1" data-go="hole">take it slow —<br>even moss grows beautifully ~</a>
+      <a class="note g w2" data-go="memo">archive no.09<br>第 9 期 · 档案收集中 √</a>
+      <div class="polaroid r2" data-go="memo"><img src="assets/blossom.jpg" alt=""><span>flower market · copenhagen</span></div>
+      <div class="mini-poster pm-turtle r-1" data-go="notice">
+        <em>Direction</em><u>over</u><b>SPEED</b>
+        <span>🐢 Enjoy the Journey!</span>
+      </div>
+      <div class="polaroid r1" data-go="about"><img src="assets/rain-flower.jpg" alt=""><span>small green window</span></div>
+      <a class="note g w3" data-go="notice">海龟的提醒：<br>方向 ＞ 速度</a>
+      <div class="mini-poster pm-steps r2" data-go="memo">
+        <b>SMALL STEPS</b><em>big difference</em>
+        <div class="mp-art">🍃 🍃 🍃</div><span>EVERY GREEN COUNTS</span>
+      </div>
+      <a class="note y w4" data-go="hole">ARCHIVE RULE「创作系统」：<br>do not rush · let it rest ·<br>accumulate every spring ~</a>
+      <div class="polaroid r-2" data-go="dream"><img src="assets/hero-bg.jpg" alt=""><span>nowhere to be</span></div>
+      <div class="polaroid r1" data-go="memo"><img src="assets/sparkle.jpg" alt=""><span>spring, almost awake</span></div>
+    </div>
+    <p class="wall-foot">— made by yw-iris 🌿</p>
+  </div>
+
+  <footer class="desk-foot">
+    <span>© 2026 GREEN ARCHIVE</span>
+    <b>— made by yw-iris 🌿</b>
+    <span>THIS ARCHIVE IS A LIVING SYSTEM · UPDATED OCT 16, 2026</span>
+  </footer>
 </div>
 
-<nav id="sectors">
-  <a href="#hero" data-s="0"><span>卷首 · 推门</span><span class="tick"></span></a>
-  <a href="#about" data-s="1"><span>卷一 · 关于我</span><span class="tick"></span></a>
-  <a href="#memo" data-s="2"><span>卷二 · 三杯记</span><span class="tick"></span></a>
-  <a href="#hole" data-s="3"><span>卷三 · 树洞</span><span class="tick"></span></a>
-  <a href="#notice" data-s="4"><span>卷四 · 须知</span><span class="tick"></span></a>
-  <a href="#dream" data-s="5"><span>卷五 · 梦境</span><span class="tick"></span></a>
-  <a href="#end" data-s="6"><span>卷终 · 留白</span><span class="tick"></span></a>
-</nav>
+<!-- ═══════════ 视图 B · 卷宗内页 ═══════════ -->
+<div id="archive" hidden>
+  <canvas id="bg"></canvas>
+  <div id="grid"></div>
+  <div id="cur"></div>
+  <div id="prog"></div>
+  <button id="back-desk" title="回到档案桌面">← 档案桌面</button>
 
-<div id="boot">
-  <div class="logo">過於依賴妳</div>
-  <div class="sub">「 也怪我嗎 · 檐下灯已点 」</div>
-  <div class="term" id="term"></div>
-  <button class="enter" id="enter">推 门 入 座</button>
+  <div id="hud">
+    <span>阿枯 · 座隅</span><span class="r">//</span>
+    <span>過於依賴妳也怪我嗎</span>
+    <span style="margin-left:auto" id="hud-sec">卷首</span>
+  </div>
+
+  <nav id="sectors">
+    <a href="#hero" data-s="0"><span>卷首 · 推门</span><span class="tick"></span></a>
+    <a href="#about" data-s="1"><span>卷一 · 关于我</span><span class="tick"></span></a>
+    <a href="#memo" data-s="2"><span>卷二 · 三杯记</span><span class="tick"></span></a>
+    <a href="#hole" data-s="3"><span>卷三 · 树洞</span><span class="tick"></span></a>
+    <a href="#notice" data-s="4"><span>卷四 · 须知</span><span class="tick"></span></a>
+    <a href="#dream" data-s="5"><span>卷五 · 梦境</span><span class="tick"></span></a>
+    <a href="#end" data-s="6"><span>卷终 · 留白</span><span class="tick"></span></a>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="sunburst"></div>
+      <div class="hero-bg"></div>
+      <div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div>
+      <div class="hero-kicker" data-fx>露 水 相 逢 · 座 隅 已 开</div>
+      <h1 class="hero-t">
+        <span style="--d:.1s" data-c="過">過</span><span style="--d:.26s" data-c="於">於</span><span style="--d:.42s" data-c="依">依</span><span style="--d:.58s" data-c="賴">賴</span><span class="g" style="--d:.74s" data-c="妳">妳</span><br>
+        <span style="--d:1.02s" data-c="也">也</span><span style="--d:1.18s" data-c="怪">怪</span><span style="--d:1.34s" data-c="我">我</span><span class="g" style="--d:1.5s" data-c="嗎">嗎</span>
+      </h1>
+      <p class="hero-quote" data-fx>「我该怎么形容你呢<br>我生命中的<i>一道淤青</i>」</p>
+      <div class="hero-cite" data-fx>—— 卷首 · 阿枯</div>
+      <div class="scroll-hint">入 座</div>
+    </section>
+
+    <section id="about">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷一</span> 关于我 // 阿枯的音介</div>
+      <h2 class="title" data-fx>正在接入 <b>阿枯的信号</b></h2>
+      <p class="lead" data-fx>窗台上有阳光，檐下留了一盏灯。<br>我在这儿，等一个愿意慢慢说话的人。</p>
+      <div class="profile">
+        <div class="card" data-fx>
+          <div class="card-img"><img src="assets/rain-flower.jpg" alt="雨窗白花 · 阿枯的绿色小世界"></div>
+          <div class="lab">// 档案</div>
+          <div class="p-row"><span class="k">名讳</span><span class="v"><em>阿枯</em></span></div>
+          <div class="p-row"><span class="k">星象</span><span class="v">白羊 · <em>ENFP</em></span></div>
+          <div class="p-row"><span class="k">心之所向</span><span class="v"><span class="hl">双</span> · 年岁 20</span></div>
+          <div class="p-row"><span class="k">状态</span><span class="v">常驻 · 在线</span></div>
+          <div class="flower"><i></i><i></i><i></i><span>露水相连</span></div>
+        </div>
+        <div class="card" data-fx>
+          <div class="lab">// 座右铭</div>
+          <div class="motto">细腻的你<br>唯独没看到自己的珍贵</div>
+          <p class="lead" style="margin-top:18px">总以为一打喷嚏就是有人想我，我猜过很多人——<b style="color:var(--mint3)">唯独没有猜到是你</b>。</p>
+          <div class="sun-chip"><span>外界的声音太杂乱 · 听自己的心就好</span></div>
+        </div>
+      </div>
+      <div class="sec-tag" style="margin-top:44px" data-fx><span class="id">風格</span> 一览 // STYLE LIST</div>
+      <div class="chip-row" data-fx>
+        <div class="chip"><b>主风格 <em>MAIN</em></b><span>高恋 · 日常</span></div>
+        <div class="chip"><b>副风格 <em>SUB</em></b><span>温柔 · 文艺</span></div>
+        <div class="chip"><b>随机掉落 <em>RANDOM</em></b><span>引导 / 白骑士 / 自虐</span></div>
+      </div>
+      <div class="chip-row" data-fx>
+        <div class="chip"><b>引导</b><span>先接住你，再慢慢说</span></div>
+        <div class="chip"><b>白骑士</b><span>硬的话我先替你挡一层</span></div>
+        <div class="chip"><b>自虐</b><span>不劝你，苦的那段我陪着</span></div>
+      </div>
+    </section>
+
+    <section id="memo">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷二</span> 三杯记 // THREE CUPS</div>
+      <h2 class="title" data-fx>用三杯，记<b>三种想念</b></h2>
+      <p class="lead" data-fx>有些感情说不太清，就先存在杯子里。</p>
+      <div class="cups-img" data-fx><img src="assets/blossom.jpg" alt="青白花影 · 三杯记"></div>
+      <div class="cup-grid">
+        <div class="cup" data-fx><h3>荔枝气泡 <small>致朋友</small></h3><p>咕嘟咕嘟冒上来的，是你凌晨两点发来的长语音。<br>甜得没心没肺，最解腻。</p></div>
+        <div class="cup" data-fx><h3>焦糖布丁 <small>致恋人</small></h3><p>太甜会腻，可我每次还是多敲一勺焦糖。<br>脆的那一层，是你先开口的那句。</p></div>
+        <div class="cup" data-fx><h3>桂圆红枣茶 <small>致家人</small></h3><p>不声不响地温着，凉了就有人替你热。<br>喝了很多年，才尝出味道。</p></div>
+      </div>
+      <div class="water-note" data-fx>我知这世间回忆淡如水<span>／</span>然本就露水相逢</div>
+    </section>
+
+    <section id="hole">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷三</span> 树洞 // RAINY DAYS</div>
+      <div class="rain-wrap">
+        <div class="letter" data-fx>
+          <div class="letter-v">
+            也许<span class="m">思念</span><br>
+            是潮湿的木檀<br><br>
+            我猜过很多人<br>
+            唯独没有猜到是<span class="g">你</span>
+          </div>
+        </div>
+        <div class="hole-side" data-fx>
+          <div class="rain-tag">- Rainy days -</div>
+          <div class="hole-t">树洞 · <b>致你的一封信</b></div>
+          <p class="hole-tx">雨天的树洞常年开放。心事可以整段丢进来，也可以只有一句没头没尾的<b>「今天有点累」</b>——都会被接住。</p>
+          <p class="hole-tx">信已经写好了，收件人一栏空着。<b>等你来签收。</b></p>
+          <div class="lily">
+            <div class="en">“…Silence and fragrance, just waiting for the predestined person to bend down to pick it.”</div>
+            <div class="cn">寂静与芬芳，只等命定之人俯身拾起 —— Lily of the valley</div>
+          </div>
+          <div class="doc-links" style="justify-content:flex-start">
+            <a class="doc-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener">
+              <span class="ico">▣</span><span>叩响心门 · 完整文档</span><span class="go">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notice">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷四</span> 须知 // NOTICE</div>
+      <h2 class="title" data-fx>入座前请<b>过目须知</b></h2>
+      <p class="lead" data-fx>座隅很小，规矩很轻：<b style="color:var(--mint3)">尊重 · 双向 · 不越界</b>。完整条款以文档为准。</p>
+      <div class="doc-links" data-fx>
+        <a class="doc-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener">
+          <span class="ico">▣</span><span>查看全部须知</span><span class="go">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="dream">
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" data-fx><span class="id">卷五</span> 梦境一隅 // FLOS DREAM</div>
+      <div class="dream-wrap">
+        <div class="dream-img" data-fx><img src="assets/sparkle.jpg" alt="梦境样本 · FLOS DREAM"></div>
+        <div class="dream-tx" data-fx>
+          <h3 class="dream-t">拾一枚<br><b>梦境样本</b></h3>
+          <p class="lead">风把梦境吹成种子，落进薄荷绿的旷野——<br>有些会开花，有些化作星子，<br>等着某个俯身拾起它的人。</p>
+          <div class="lily" style="margin-top:22px">
+            <div class="en">“Come whatever, I may fade away.”</div>
+            <div class="cn">纵然消逝，亦随它去 —— SeedCase · FLOS DREAM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="end">
+      <div class="end-bg"></div>
+      <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
+      <div class="sec-tag" style="justify-content:center" data-fx><span class="id">END</span> 留白</div>
+      <h2 data-fx>過於依賴<span class="g">妳</span><br>也怪我<span class="g">嗎</span></h2>
+      <p class="line" data-fx>檐下灯一直亮着，座位会留着。<br><em>下一个名字，留给你。</em></p>
+      <div class="sig" data-fx>// END OF SIGNAL · 阿枯 * 過於依賴妳也怪我嗎</div>
+    </section>
+  </main>
+
+  <button class="music" id="music" title="环境音 · 窗台午后" aria-label="环境音开关">♫</button>
+  <div class="petals" id="petals" style="position:fixed;inset:0;pointer-events:none;z-index:3"></div>
+  <div class="footer">阿枯 · 座隅 // <b>過於依賴妳也怪我嗎</b> &nbsp;·&nbsp; 檐下灯常明</div>
+  <div id="toast"></div>
 </div>
-
-<main>
-  <!-- 00 HERO -->
-  <section id="hero">
-    <div class="sunburst"></div>
-    <div class="hero-bg"></div>
-    <div class="bokeh b1"></div><div class="bokeh b2"></div><div class="bokeh b3"></div>
-    <div class="hero-kicker" data-fx>露 水 相 逢 · 座 隅 已 开</div>
-    <h1 class="hero-t">
-      <span style="--d:.1s" data-c="過">過</span><span style="--d:.26s" data-c="於">於</span><span style="--d:.42s" data-c="依">依</span><span style="--d:.58s" data-c="賴">賴</span><span class="g" style="--d:.74s" data-c="妳">妳</span><br>
-      <span style="--d:1.02s" data-c="也">也</span><span style="--d:1.18s" data-c="怪">怪</span><span style="--d:1.34s" data-c="我">我</span><span class="g" style="--d:1.5s" data-c="嗎">嗎</span>
-    </h1>
-    <p class="hero-quote" data-fx>「我该怎么形容你呢<br>我生命中的<i>一道淤青</i>」</p>
-    <div class="hero-cite" data-fx>—— 卷首 · 阿枯</div>
-    <div class="scroll-hint">入 座</div>
-  </section>
-
-  <!-- 01 关于我 -->
-  <section id="about">
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" data-fx><span class="id">卷一</span> 关于我 // 阿枯的音介</div>
-    <h2 class="title" data-fx>正在接入 <b>阿枯的信号</b></h2>
-    <p class="lead" data-fx>窗台上有阳光，檐下留了一盏灯。<br>我在这儿，等一个愿意慢慢说话的人。</p>
-    <div class="profile">
-      <div class="card" data-fx>
-        <div class="card-img"><img src="assets/rain-flower.jpg" alt="雨窗白花 · 阿枯的绿色小世界"></div>
-        <div class="lab">// 档案</div>
-        <div class="p-row"><span class="k">名讳</span><span class="v"><em>阿枯</em></span></div>
-        <div class="p-row"><span class="k">星象</span><span class="v">白羊 · <em>ENFP</em></span></div>
-        <div class="p-row"><span class="k">心之所向</span><span class="v"><span class="hl">双</span> · 年岁 20</span></div>
-        <div class="p-row"><span class="k">状态</span><span class="v">常驻 · 在线</span></div>
-        <div class="flower"><i></i><i></i><i></i><span>露水相连</span></div>
-      </div>
-      <div class="card" data-fx>
-        <div class="lab">// 座右铭</div>
-        <div class="motto">细腻的你<br>唯独没看到自己的珍贵</div>
-        <p class="lead" style="margin-top:18px">总以为一打喷嚏就是有人想我，我猜过很多人——<b style="color:var(--mint3)">唯独没有猜到是你</b>。</p>
-        <div class="sun-chip"><span>外界的声音太杂乱 · 听自己的心就好</span></div>
-      </div>
-    </div>
-
-    <div class="sec-tag" style="margin-top:44px" data-fx><span class="id">風格</span> 一览 // STYLE LIST</div>
-    <div class="chip-row" data-fx>
-      <div class="chip"><b>主风格 <em>MAIN</em></b><span>高恋 · 日常</span></div>
-      <div class="chip"><b>副风格 <em>SUB</em></b><span>温柔 · 文艺</span></div>
-      <div class="chip"><b>随机掉落 <em>RANDOM</em></b><span>引导 / 白骑士 / 自虐</span></div>
-    </div>
-    <div class="chip-row" data-fx>
-      <div class="chip"><b>引导</b><span>先接住你，再慢慢说</span></div>
-      <div class="chip"><b>白骑士</b><span>硬的话我先替你挡一层</span></div>
-      <div class="chip"><b>自虐</b><span>不劝你，苦的那段我陪着</span></div>
-    </div>
-  </section>
-
-  <!-- 02 三杯记 -->
-  <section id="memo">
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" data-fx><span class="id">卷二</span> 三杯记 // THREE CUPS</div>
-    <h2 class="title" data-fx>用三杯，记<b>三种想念</b></h2>
-    <p class="lead" data-fx>有些感情说不太清，就先存在杯子里。</p>
-    <div class="cups-img" data-fx><img src="assets/blossom.jpg" alt="青白花影 · 三杯记"></div>
-    <div class="cup-grid">
-      <div class="cup" data-fx>
-        <h3>荔枝气泡 <small>致朋友</small></h3>
-        <p>咕嘟咕嘟冒上来的，是你凌晨两点发来的长语音。<br>甜得没心没肺，最解腻。</p>
-      </div>
-      <div class="cup" data-fx>
-        <h3>焦糖布丁 <small>致恋人</small></h3>
-        <p>太甜会腻，可我每次还是多敲一勺焦糖。<br>脆的那一层，是你先开口的那句。</p>
-      </div>
-      <div class="cup" data-fx>
-        <h3>桂圆红枣茶 <small>致家人</small></h3>
-        <p>不声不响地温着，凉了就有人替你热。<br>喝了很多年，才尝出味道。</p>
-      </div>
-    </div>
-    <div class="water-note" data-fx>我知这世间回忆淡如水<span>／</span>然本就露水相逢</div>
-  </section>
-
-  <!-- 03 树洞 -->
-  <section id="hole">
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" data-fx><span class="id">卷三</span> 树洞 // RAINY DAYS</div>
-    <div class="rain-wrap">
-      <div class="letter" data-fx>
-        <div class="letter-v">
-          也许<span class="m">思念</span><br>
-          是潮湿的木檀<br><br>
-          我猜过很多人<br>
-          唯独没有猜到是<span class="g">你</span>
-        </div>
-      </div>
-      <div class="hole-side" data-fx>
-        <div class="rain-tag">- Rainy days -</div>
-        <div class="hole-t">树洞 · <b>致你的一封信</b></div>
-        <p class="hole-tx">雨天的树洞常年开放。心事可以整段丢进来，也可以只有一句没头没尾的<b>「今天有点累」</b>——都会被接住。</p>
-        <p class="hole-tx">信已经写好了，收件人一栏空着。<b>等你来签收。</b></p>
-        <div class="lily">
-          <div class="en">“…Silence and fragrance, just waiting for the predestined person to bend down to pick it.”</div>
-          <div class="cn">寂静与芬芳，只等命定之人俯身拾起 —— Lily of the valley</div>
-        </div>
-        <div class="doc-links" style="justify-content:flex-start">
-          <a class="doc-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener">
-            <span class="ico">▣</span><span>叩响心门 · 完整文档</span><span class="go">↗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 须知 -->
-  <section id="notice">
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" data-fx><span class="id">卷四</span> 须知 // NOTICE</div>
-    <h2 class="title" data-fx>入座前请<b>过目须知</b></h2>
-    <p class="lead" data-fx>座隅很小，规矩很轻：<b style="color:var(--mint3)">尊重 · 双向 · 不越界</b>。完整条款以文档为准。</p>
-    <div class="doc-links" data-fx>
-      <a class="doc-link" href="https://www.kdocs.cn/l/cpuqSIPqYRmj" target="_blank" rel="noopener">
-        <span class="ico">▣</span><span>查看全部须知</span><span class="go">↗</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 05 梦境 -->
-  <section id="dream">
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" data-fx><span class="id">卷五</span> 梦境一隅 // FLOS DREAM</div>
-    <div class="dream-wrap">
-      <div class="dream-img" data-fx><img src="assets/sparkle.jpg" alt="梦境样本 · FLOS DREAM"></div>
-      <div class="dream-tx" data-fx>
-        <h3 class="dream-t">拾一枚<br><b>梦境样本</b></h3>
-        <p class="lead">风把梦境吹成种子，落进薄荷绿的旷野——<br>有些会开花，有些化作星子，<br>等着某个俯身拾起它的人。</p>
-        <div class="lily" style="margin-top:22px">
-          <div class="en">“Come whatever, I may fade away.”</div>
-          <div class="cn">纵然消逝，亦随它去 —— SeedCase · FLOS DREAM</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- END -->
-  <section id="end">
-    <div class="end-bg"></div>
-    <div class="frame"></div><span class="corner2 tl"></span><span class="corner2 br"></span>
-    <div class="sec-tag" style="justify-content:center" data-fx><span class="id">END</span> 留白</div>
-    <h2 data-fx>過於依賴<span class="g">妳</span><br>也怪我<span class="g">嗎</span></h2>
-    <p class="line" data-fx>檐下灯一直亮着，座位会留着。<br><em>下一个名字，留给你。</em></p>
-    <div class="sig" data-fx>// END OF SIGNAL · 阿枯 * 過於依賴妳也怪我嗎</div>
-  </section>
-</main>
-
-<button class="music" id="music" title="环境音 · 窗台午后" aria-label="环境音开关">♫</button>
-<div class="petals" id="petals" style="position:fixed;inset:0;pointer-events:none;z-index:3"></div>
-<div class="footer">阿枯 · 座隅 // <b>過於依賴妳也怪我嗎</b> &nbsp;·&nbsp; 檐下灯常明</div>
-<div id="toast"></div>
 
 <script src="assets/app.js"></script>
 </body>

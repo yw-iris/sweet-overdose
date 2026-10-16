@@ -1,6 +1,64 @@
-/* ===== 背景：糖粒与气泡上浮 ===== */
+/* ═══════ 视图切换：档案桌面 ⇄ 卷宗内页 ═══════ */
 (function () {
-  const cv = document.getElementById('bg'), ctx = cv.getContext('2d');
+  const desk = document.getElementById('desk');
+  const archive = document.getElementById('archive');
+  const music = document.getElementById('music');
+
+  function toast(msg) {
+    const t = document.getElementById('toast');
+    if (!t) return;
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  function openArchive(sec) {
+    if (!archive.hidden) {           // 已在内页 → 仅滚动
+      const el = document.getElementById(sec);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    archive.hidden = false;
+    desk.style.display = 'none';
+    document.body.classList.remove('desk-on');
+    document.body.classList.add('archive-on');
+    requestAnimationFrame(() => {
+      const el = document.getElementById(sec);
+      if (el) el.scrollIntoView({ behavior: 'auto' });
+    });
+    if (window.__startAmbient) window.__startAmbient();
+    music.classList.add('show');
+    toast(sec === 'hero' ? '已翻开卷宗 · 欢迎入座' : '已翻到对应的一卷');
+  }
+
+  function backToDesk() {
+    archive.hidden = true;
+    desk.style.display = '';
+    document.body.classList.add('desk-on');
+    document.body.classList.remove('archive-on');
+    window.scrollTo(0, 0);
+    if (window.__stopAmbient) window.__stopAmbient();
+    music.classList.remove('show', 'on');
+  }
+
+  document.querySelectorAll('[data-go]').forEach(el => {
+    el.addEventListener('click', e => { e.preventDefault(); openArchive(el.dataset.go); });
+  });
+  document.getElementById('back-desk').addEventListener('click', backToDesk);
+
+  /* 桌面两种墙面切换 */
+  document.querySelectorAll('.mode-panel button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.mode-panel button').forEach(x => x.classList.toggle('on', x === b));
+      desk.className = 'mode-' + b.dataset.mode;
+    });
+  });
+})();
+
+/* ===== 背景粒子（内页） ===== */
+(function () {
+  const cv = document.getElementById('bg');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
   let W, H, DPR, parts = [];
   function resize() {
     DPR = Math.min(devicePixelRatio || 1, 2);
@@ -32,7 +90,7 @@
 /* ===== 自定义光标 ===== */
 (function () {
   const cur = document.getElementById('cur');
-  if (!matchMedia('(hover:hover) and (pointer:fine)').matches) { cur.remove(); return; }
+  if (!cur || !matchMedia('(hover:hover) and (pointer:fine)').matches) { if (cur) cur.remove(); return; }
   addEventListener('mousemove', e => { cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px'; });
   document.addEventListener('mouseover', e => {
     const t = e.target.closest('a,button,.svc,.card,.letter,.cup,.chip');
@@ -40,54 +98,10 @@
   });
 })();
 
-/* ===== 开屏小字：逐字落墨 ===== */
-(function () {
-  const sub = document.querySelector('#boot .sub');
-  if (!sub) return;
-  const txt = sub.textContent.trim();
-  sub.textContent = '';
-  [...txt].forEach((c, i) => {
-    const ch = (c === ' ') ? '\u00a0' : c, s = document.createElement('span');
-    s.textContent = ch; s.dataset.c = ch;
-    s.style.setProperty('--d', (2.4 + i * 0.085).toFixed(2) + 's');
-    sub.appendChild(s);
-  });
-})();
-
-/* ===== boot 终端 ===== */
-(function () {
-  const term = document.getElementById('term'), enter = document.getElementById('enter');
-  const lines = [
-    '<span class="p">&gt; 拂去尘埃 · 展开画卷 ...</span>',
-    '&gt; 点亮 <span class="ok">檐下灯</span> / 洒落 <span class="ok">花瓣雨</span> / 研墨 <span class="ok">旧时字</span>',
-    '&gt; 座隅候客：<span class="p">阿枯</span> · 白羊 · ENFP · 20 ... <span class="ok">已入座</span>',
-    '&gt; 「总以为一打喷嚏，就是有人想我」',
-    '&gt; 推门即可，<span class="ok">请慢些走</span>'
-  ];
-  let i = 0, j = 0;
-  function step() {
-    if (i >= lines.length) { enter.classList.add('show'); return; }
-    const ln = lines[i];
-    j += 3;
-    term.innerHTML = lines.slice(0, i).join('<br>') + (i ? '<br>' : '') + ln.slice(0, Math.min(ln.length, j)) + '<span class="blink">▌</span>';
-    if (j >= ln.length + 3) { i++; j = 0; setTimeout(step, 190); }
-    else setTimeout(step, 28);
-  }
-  step();
-  enter.addEventListener('click', () => {
-    document.getElementById('boot').classList.add('gone');
-    document.body.classList.remove('locked');
-    spawnSugar();
-    const t = document.getElementById('toast');
-    t.textContent = '檐下灯已亮 · 欢迎入座'; t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2400);
-  });
-})();
-
-/* ===== 糖粒 / 薄荷叶 飘落 ===== */
+/* ===== 糖粒飘落（内页入座后） ===== */
 function spawnSugar() {
   const box = document.getElementById('petals');
-  if (box.childElementCount) return;
+  if (!box || box.childElementCount) return;
   const sugar = ['linear-gradient(135deg,#eafaf3,#ffffff)', 'linear-gradient(135deg,#fff3d6,#fffaf0)', 'linear-gradient(135deg,#ffdfe4,#fff6f4)'];
   for (let i = 0; i < 18; i++) {
     const p = document.createElement('i'); p.className = 'petal';
@@ -100,9 +114,10 @@ function spawnSugar() {
   }
 }
 
-/* ===== 环境音：窗台午后（WebAudio 合成，无需音频文件） ===== */
+/* ===== 环境音（WebAudio 合成） ===== */
 (function () {
   const btn = document.getElementById('music');
+  if (!btn) return;
   let actx = null, master = null, nodes = [], timer = null, playing = false;
   const SCALE = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25];
 
@@ -111,7 +126,6 @@ function spawnSugar() {
     master = actx.createGain(); master.gain.value = 0; master.connect(actx.destination);
     const filt = actx.createBiquadFilter(); filt.type = 'lowpass'; filt.frequency.value = 1500; filt.Q.value = .6;
     filt.connect(master);
-    // 低频 pad
     const pad = actx.createGain(); pad.gain.value = .05; pad.connect(filt);
     [130.81, 196.00, 261.63].forEach((f, i) => {
       const o = actx.createOscillator(); o.type = 'sine'; o.frequency.value = f;
@@ -124,7 +138,6 @@ function spawnSugar() {
     });
     nodes.push(pad, filt);
   }
-
   function pluck() {
     if (!playing) return;
     const t = actx.currentTime;
@@ -138,7 +151,6 @@ function spawnSugar() {
     o.start(t); o.stop(t + 2.7);
     timer = setTimeout(pluck, 1600 + Math.random() * 3200);
   }
-
   function start() {
     if (!actx) build();
     actx.resume();
@@ -148,7 +160,6 @@ function spawnSugar() {
     master.gain.linearRampToValueAtTime(.5, actx.currentTime + 3);
     clearTimeout(timer); timer = setTimeout(pluck, 900);
     btn.classList.remove('off'); btn.classList.add('on');
-    btn.title = '环境音 · 窗台午后（点击关闭）';
   }
   function stop() {
     playing = false; clearTimeout(timer);
@@ -158,23 +169,23 @@ function spawnSugar() {
       master.gain.linearRampToValueAtTime(0, actx.currentTime + .6);
     }
     btn.classList.add('off'); btn.classList.remove('on');
-    btn.title = '环境音 · 窗台午后（点击开启）';
   }
-
-  document.getElementById('enter').addEventListener('click', () => {
-    btn.classList.add('show');
-    try { start(); } catch (e) { btn.classList.add('show', 'off'); }
-  });
+  window.__startAmbient = start;
+  window.__stopAmbient = stop;
   btn.addEventListener('click', () => { playing ? stop() : start(); });
 })();
 
-/* ===== 滚动进度 + 卷宗高亮 + 入场 ===== */
+/* ===== 内页：滚动进度 + 卷宗高亮 + 入场 + 糖粒 ===== */
 (function () {
   const prog = document.getElementById('prog'), hudSec = document.getElementById('hud-sec');
-  const secs = [...document.querySelectorAll('main section')];
+  const archive = document.getElementById('archive');
+  if (!archive) return;
+  let sugarDone = false;
+  const secs = [...document.querySelectorAll('#archive main section')];
   const navA = [...document.querySelectorAll('#sectors a')];
   const ids = ['卷首', '卷一', '卷二', '卷三', '卷四', '卷五', '卷终'];
   addEventListener('scroll', () => {
+    if (archive.hidden) return;
     const h = document.documentElement;
     prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
     let cur = 0;
@@ -190,10 +201,11 @@ function spawnSugar() {
       en.target.querySelectorAll('[data-fx]').forEach((el, i2) => {
         setTimeout(() => el.classList.add('vis'), i2 * 90);
       });
+      if (!sugarDone) { sugarDone = true; spawnSugar(); }
     });
   }, { threshold: .16 });
-  document.querySelectorAll('section').forEach(s => io.observe(s));
-  document.querySelectorAll('section [data-fx]').forEach(el => {
+  document.querySelectorAll('#archive section').forEach(s => io.observe(s));
+  document.querySelectorAll('#archive section [data-fx]').forEach(el => {
     if (!el.closest('[data-fx]')) io.observe(el);
   });
   navA.forEach(a => a.addEventListener('click', e => e.stopPropagation()));
