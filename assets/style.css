@@ -349,7 +349,7 @@ body{-webkit-tap-highlight-color:transparent}
 .stamp{position:absolute;left:-30px;bottom:16%;transform:rotate(-18deg);border:2px solid #b56a4a;color:#b56a4a;
   font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.22em;padding:15px 9px;border-radius:50%;opacity:.75;z-index:3}
 
-.note{font-family:'Caveat',cursive;font-size:17px;line-height:1.35;color:#4a4632;padding:14px 16px;width:152px;
+.note{position:absolute;font-family:'Caveat',cursive;font-size:17px;line-height:1.35;color:#4a4632;padding:14px 16px;width:152px;
   box-shadow:2px 6px 14px rgba(60,50,30,.24);text-decoration:none;transition:all .25s;cursor:pointer;z-index:3;display:block}
 .note.y{background:linear-gradient(180deg,#fdf3b4,#fbe98e)}
 .note.g{background:linear-gradient(180deg,#dcedd3,#c9e2bd)}
@@ -441,10 +441,9 @@ body{-webkit-tap-highlight-color:transparent}
   margin-top:10px;padding-top:16px;font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.2em;color:#8a8574}
 .desk-foot b{color:#5c7a52;font-weight:400}
 
-#back-desk{position:fixed;left:16px;top:60px;z-index:1450;font-family:'ZCOOL KuaiLe','Noto Sans SC',sans-serif;
-  font-size:13px;letter-spacing:.1em;color:#fff;background:linear-gradient(135deg,var(--mint1),var(--mint3));
-  border:none;border-radius:999px;padding:10px 18px;cursor:pointer;box-shadow:0 8px 20px rgba(63,174,143,.4);transition:all .3s}
-#back-desk:hover{transform:translateY(-2px)}
+#back-desk{font-family:'ZCOOL KuaiLe','Noto Sans SC',sans-serif;font-size:13px;letter-spacing:.08em;
+  color:#fdfcf7;background:#2b2b26;border:none;border-radius:4px;padding:9px 16px;cursor:pointer;transition:all .25s}
+#back-desk:hover{background:#b56a4a}
 
 @media(max-width:1080px){
   .board-index{grid-template-columns:1fr;max-width:640px;margin:0 auto}
@@ -463,3 +462,59 @@ body{-webkit-tap-highlight-color:transparent}
   .cork{padding:30px 14px}
   .tag-row{grid-template-columns:repeat(3,1fr)}
 }
+
+/* ═══════ 内页 · 档案纸感适配 ═══════ */
+body.archive-on{
+  --bg:#efe9da;--bg2:#e6dfcc;
+  --panel:rgba(251,248,238,.94);
+  --line:rgba(95,122,82,.32);--line-mint:rgba(74,124,89,.5);--line-sun:rgba(217,168,78,.6);
+  --txt:#3c4034;--dim:#6b6a58;--dim2:#9a957e;
+  --mint1:#cfe0c3;--mint2:#8fae7e;--mint3:#4a7c59;--deep:#3c5a49;
+  --sun:#e9c46a;--sun2:#c9963e;--peach:#c97a5a;
+  --soft:0 10px 26px rgba(60,50,30,.12);
+  background:#efe9da!important;
+  background-image:radial-gradient(rgba(120,110,80,.055) 1px,transparent 1px)!important;
+  background-size:22px 22px!important}
+body.archive-on #grid{opacity:.3;
+  background-image:linear-gradient(rgba(95,122,82,.14) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(95,122,82,.14) 1px,transparent 1px)}
+body.archive-on .hero-bg{opacity:.26;filter:saturate(.9) sepia(.12)}
+body.archive-on .end-bg{opacity:.24;filter:saturate(.9) sepia(.12)}
+body.archive-on .card-img::after{background:linear-gradient(rgba(255,255,255,0) 62%,rgba(251,248,238,.94))}
+body.archive-on .letter{background:linear-gradient(160deg,#fbf8ee,#f2ecd9)}
+body.archive-on .petal{opacity:.55}
+body.archive-on .title b,body.archive-on h1.hero-t span.g,body.archive-on #end h2 .g{text-shadow:none}
+body.archive-on .doc-link,body.archive-on .chip,body.archive-on .cup,body.archive-on .svc{background:rgba(251,248,238,.92)}
+
+/* ---- 模块导航条 ---- */
+.module-bar{position:sticky;top:0;z-index:1400;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:10px 20px;background:rgba(251,248,238,.96);border-bottom:1px solid #d8d2c2;
+  box-shadow:0 4px 14px rgba(60,50,30,.08);backdrop-filter:blur(6px)}
+.mb-title{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:#2f5a3c;font-weight:400}
+.mb-links{display:flex;gap:8px;flex-wrap:wrap;flex:1;justify-content:center}
+.mb-link{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.12em;color:#6b6a58;
+  background:#f2edda;border:1px solid #d8d2c2;padding:8px 15px;cursor:pointer;text-decoration:none;transition:all .25s;position:relative}
+.mb-link:hover{border-color:#2b2b26;color:#2b2b26;transform:translateY(-2px)}
+.mb-link.on{background:#2b2b26;color:#fdfcf7;border-color:#2b2b26}
+.mb-pn{display:flex;gap:8px}
+.mb-pn button{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4b4a40;
+  background:#f6f3ea;border:1px solid #d8d2c2;padding:9px 13px;cursor:pointer;transition:all .25s}
+.mb-pn button:hover{border-color:#2b2b26;background:#fff}
+@media(max-width:760px){
+  .module-bar{gap:8px;padding:9px 12px}
+  .mb-title{display:none}
+  .mb-links{justify-content:flex-start}
+  .mb-link{padding:7px 11px;font-size:10px}
+}
+
+/* ---- 模块提示角标 ---- */
+.mini-poster,.polaroid,.mi,.tag-card,.handle,.logo-card,.tabs a{position:relative}
+.go-badge{position:absolute;top:8px;right:8px;z-index:8;font-family:'Share Tech Mono',monospace;font-size:9px;
+  letter-spacing:.1em;background:#2b2b26;color:#f6f3ea;padding:4px 9px;border-radius:999px;
+  pointer-events:none;opacity:.94;box-shadow:0 2px 6px rgba(0,0,0,.18);white-space:nowrap}
+.mini-poster .go-badge,.polaroid .go-badge,.mi .go-badge,.tag-card .go-badge{top:6px;right:6px}
+.tabs a .go-badge{top:auto;bottom:-11px;left:50%;right:auto;transform:translateX(-50%)}
+.logo-card .go-badge{top:auto;bottom:-11px;left:50%;right:auto;transform:translateX(-50%)}
+.note .go-badge{top:-12px;right:-10px}
+.handle .go-badge{top:50%;right:12px;transform:translateY(-50%)}
+.note:hover .go-badge,.mini-poster:hover .go-badge,.polaroid:hover .go-badge{background:#b56a4a}

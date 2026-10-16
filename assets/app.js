@@ -11,23 +11,29 @@
     setTimeout(() => t.classList.remove('show'), 2200);
   }
 
+  const ORDER = ['hero', 'about', 'memo', 'hole', 'notice', 'dream', 'end'];
+  const NAMES = { hero: '卷首 · 入座', about: '关于我', memo: '三杯记', hole: '树洞', notice: '须知', dream: '梦境', end: '卷终' };
+  let curIdx = 0;
+
+  function setModule(sec) {
+    document.querySelectorAll('#archive main section').forEach(s => { s.hidden = (s.id !== sec); });
+    document.querySelectorAll('.mb-link').forEach(a => a.classList.toggle('on', a.dataset.go === sec));
+    curIdx = ORDER.indexOf(sec);
+    requestAnimationFrame(() => window.scrollTo(0, 0));
+    toast('已打开「' + (NAMES[sec] || sec) + '」');
+  }
+
   function openArchive(sec) {
-    if (!archive.hidden) {           // 已在内页 → 仅滚动
-      const el = document.getElementById(sec);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      return;
-    }
+    const first = archive.hidden;
     archive.hidden = false;
     desk.style.display = 'none';
     document.body.classList.remove('desk-on');
     document.body.classList.add('archive-on');
-    requestAnimationFrame(() => {
-      const el = document.getElementById(sec);
-      if (el) el.scrollIntoView({ behavior: 'auto' });
-    });
-    if (window.__startAmbient) window.__startAmbient();
-    music.classList.add('show');
-    toast(sec === 'hero' ? '已翻开卷宗 · 欢迎入座' : '已翻到对应的一卷');
+    setModule(sec);
+    if (first) {
+      if (window.__startAmbient) window.__startAmbient();
+      music.classList.add('show');
+    }
   }
 
   function backToDesk() {
@@ -44,6 +50,17 @@
     el.addEventListener('click', e => { e.preventDefault(); openArchive(el.dataset.go); });
   });
   document.getElementById('back-desk').addEventListener('click', backToDesk);
+  document.getElementById('mb-prev').addEventListener('click', () => setModule(ORDER[(curIdx + ORDER.length - 1) % ORDER.length]));
+  document.getElementById('mb-next').addEventListener('click', () => setModule(ORDER[(curIdx + 1) % ORDER.length]));
+
+  /* 模块提示角标：自动注入 */
+  document.querySelectorAll('[data-go]').forEach(el => {
+    if (el.querySelector('.go-badge') || el.tagName === 'IMG') return;
+    const b = document.createElement('span');
+    b.className = 'go-badge';
+    b.textContent = '→ ' + (NAMES[el.dataset.go] || el.dataset.go);
+    el.appendChild(b);
+  });
 
   /* 桌面两种墙面切换 */
   document.querySelectorAll('.mode-panel button').forEach(b => {
@@ -69,7 +86,7 @@
       r: (Math.random() * 2 + .7) * DPR,
       vy: -(Math.random() * .3 + .08) * DPR,
       vx: (Math.random() - .5) * .18 * DPR,
-      c: Math.random() < .34 ? '255,199,107' : (Math.random() < .55 ? '168,236,210' : '255,179,167'),
+      c: Math.random() < .34 ? '217,168,78' : (Math.random() < .55 ? '143,174,126' : '201,122,90'),
       a: Math.random() * .45 + .18, tw: Math.random() * Math.PI * 2
     }));
   }
@@ -102,7 +119,7 @@
 function spawnSugar() {
   const box = document.getElementById('petals');
   if (!box || box.childElementCount) return;
-  const sugar = ['linear-gradient(135deg,#eafaf3,#ffffff)', 'linear-gradient(135deg,#fff3d6,#fffaf0)', 'linear-gradient(135deg,#ffdfe4,#fff6f4)'];
+  const sugar = ['linear-gradient(135deg,#f6f1de,#ffffff)', 'linear-gradient(135deg,#f3e3b8,#fbf4de)', 'linear-gradient(135deg,#e8cdb8,#f7ece2)'];
   for (let i = 0; i < 18; i++) {
     const p = document.createElement('i'); p.className = 'petal';
     const s = 7 + Math.random() * 9;
@@ -177,21 +194,15 @@ function spawnSugar() {
 
 /* ===== 内页：滚动进度 + 卷宗高亮 + 入场 + 糖粒 ===== */
 (function () {
-  const prog = document.getElementById('prog'), hudSec = document.getElementById('hud-sec');
+  const prog = document.getElementById('prog');
   const archive = document.getElementById('archive');
   if (!archive) return;
   let sugarDone = false;
   const secs = [...document.querySelectorAll('#archive main section')];
-  const navA = [...document.querySelectorAll('#sectors a')];
-  const ids = ['卷首', '卷一', '卷二', '卷三', '卷四', '卷五', '卷终'];
   addEventListener('scroll', () => {
-    if (archive.hidden) return;
+    if (archive.hidden || !prog) return;
     const h = document.documentElement;
     prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-    let cur = 0;
-    secs.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * .45) cur = i; });
-    hudSec.textContent = ids[cur] || '卷首';
-    navA.forEach(a => a.classList.toggle('on', +a.dataset.s === cur));
   }, { passive: true });
 
   const io = new IntersectionObserver(es => {
@@ -208,5 +219,4 @@ function spawnSugar() {
   document.querySelectorAll('#archive section [data-fx]').forEach(el => {
     if (!el.closest('[data-fx]')) io.observe(el);
   });
-  navA.forEach(a => a.addEventListener('click', e => e.stopPropagation()));
 })();
