@@ -53,14 +53,7 @@
   document.getElementById('mb-prev').addEventListener('click', () => setModule(ORDER[(curIdx + ORDER.length - 1) % ORDER.length]));
   document.getElementById('mb-next').addEventListener('click', () => setModule(ORDER[(curIdx + 1) % ORDER.length]));
 
-  /* 模块提示角标：自动注入 */
-  document.querySelectorAll('[data-go]').forEach(el => {
-    if (el.querySelector('.go-badge') || el.tagName === 'IMG') return;
-    const b = document.createElement('span');
-    b.className = 'go-badge';
-    b.textContent = '→ ' + (NAMES[el.dataset.go] || el.dataset.go);
-    el.appendChild(b);
-  });
+  /* 模块去向提示：已改为在模块文字里直接写明，不再注入角标 */
 
   /* 桌面两种墙面切换 */
   document.querySelectorAll('.mode-panel button').forEach(b => {
