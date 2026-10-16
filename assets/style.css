@@ -507,3 +507,9 @@ body.archive-on .letter-v{font-family:'Noto Sans SC',sans-serif;font-weight:700}
 .note .go-badge{top:-12px;right:-10px}
 .handle .go-badge{top:50%;right:12px;transform:translateY(-50%)}
 .note:hover .go-badge,.mini-poster:hover .go-badge,.polaroid:hover .go-badge{background:#b56a4a}
+
+/* 非入口装饰：不显示可点击态 */
+a[data-go]{cursor:pointer}
+.mi:not([data-go]),.tag-card:not([data-go]),.note:not([data-go]),.mini-poster:not([data-go]),.polaroid:not([data-go]){cursor:default}
+.mi:not([data-go]):hover,.tag-card:not([data-go]):hover,.mini-poster:not([data-go]):hover,.polaroid:not([data-go]):hover{transform:none;box-shadow:var(--soft,0 10px 30px rgba(0,0,0,.1))}
+.note:not([data-go]):hover{transform:rotate(-1deg)}
