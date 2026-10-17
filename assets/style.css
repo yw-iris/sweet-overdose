@@ -649,6 +649,30 @@ body.archive-on .doc-links{margin-top:34px}
   .c-cell b{font-size:20px}
   .poll{max-width:none;padding:16px 18px}
   .confess{line-height:1.9}
+
+  /* ── 强制电脑版：横屏下也保持桌面三栏拼贴 + 顶部横排（与 #desk 桌面排版一致）── */
+  body.force-desktop #desk-top{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:18px}
+  body.force-desktop .tabs{order:0;width:auto}
+  body.force-desktop .stack{display:block;min-height:0;padding:6px 2px 30px}
+  body.force-desktop .cl-grid{display:grid;grid-template-columns:262px minmax(0,1fr) 292px;gap:16px;align-items:start;padding-top:16px}
+  body.force-desktop .cl-col{display:flex;flex-direction:column;gap:12px}
+  body.force-desktop .cl-col-l,body.force-desktop .cl-col-r{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+  body.force-desktop .cl-center{display:block;position:relative;padding:40px 10px 54px}
+  body.force-desktop .cl-sheet,body.force-desktop .cl-receipt,body.force-desktop .cl-tab,body.force-desktop .cl-sticky,body.force-desktop .cl-under,body.force-desktop .big-clip{display:block}
+  body.force-desktop .cl-round{display:flex}
+  body.force-desktop .cl-main{position:relative;transform:rotate(.4deg);max-width:530px;margin:0 auto;padding:48px 40px 34px}
+  body.force-desktop .cl-photo{position:relative;width:auto;margin:0;transform:rotate(-1.5deg)!important}
+  body.force-desktop .cl-photo img{height:198px;object-fit:cover}
+  body.force-desktop .cl-postcard{position:relative;width:100%;transform:rotate(1.2deg)}
+  body.force-desktop .cl-postcard img{height:252px}
+  body.force-desktop .ent{position:relative;display:block;width:100%;margin:0;transform:rotate(0)!important}
+  body.force-desktop .ent img{height:132px}
+  body.force-desktop .cl-bottom{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;justify-items:stretch;padding:18px 2px 0}
+  body.force-desktop .cl-bottom .ent{display:flex;flex-direction:column-reverse}
+  body.force-desktop .cl-bottom .ent img{height:178px}
+  body.force-desktop .cl-bottom .ent span{text-align:left;padding:10px 4px 8px;border-bottom:1px dashed #d8d2c2}
+  body.force-desktop .note{position:relative;display:inline-block;margin:4px;transform:rotate(-2deg)!important}
+  body.force-desktop .tape{display:block}
 }
 @media (orientation:landscape) and (max-height:430px){
   section{padding:38px 16px!important}

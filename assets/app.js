@@ -59,6 +59,19 @@
       desk.className = 'mode-' + b.dataset.mode;
     });
   });
+
+  /* 手机版 / 电脑版 视图切换（电脑版：横屏下也保持桌面三栏拼贴排版） */
+  const viewBtns = document.querySelectorAll('.mode-panel button[data-view]');
+  function applyView(v) {
+    const desktop = v === 'desktop';
+    document.body.classList.toggle('force-desktop', desktop);
+    viewBtns.forEach(x => x.classList.toggle('on', x.dataset.view === v));
+    try { localStorage.setItem('ga-view', v); } catch (e) {}
+  }
+  viewBtns.forEach(b => b.addEventListener('click', () => applyView(b.dataset.view)));
+  let savedView = 'mobile';
+  try { savedView = localStorage.getItem('ga-view') || 'mobile'; } catch (e) {}
+  applyView(savedView);
 })();
 
 /* ===== 背景粒子（内页） ===== */
