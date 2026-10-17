@@ -508,7 +508,7 @@ body.archive-on main section{padding:60px 18px;min-height:100vh;display:flex;
   flex-direction:column;justify-content:center;align-items:center;position:relative}
 /* 内页底图（模块 3–6）：淡水印铺满该屏，垫在档案卡之下 */
 body.archive-on main section::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
-  background-size:cover;background-position:center;border-radius:22px;opacity:.22}
+  background-size:cover;background-position:center;border-radius:22px;opacity:.45}
 body.archive-on main section>*{position:relative;z-index:1}
 #notice::before{background-image:url('bg-notice.jpg')}
 #script::before{background-image:url('bg-script.jpg')}
