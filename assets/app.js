@@ -12,7 +12,7 @@
   }
 
   const ORDER = ['about', 'hole', 'notice', 'script', 'reviews', 'cards', 'end'];
-  const NAMES = { about: '关于我', hole: '树洞', notice: '须知', script: '话术', reviews: '板评', cards: '卡类', end: '卷终' };
+  const NAMES = { about: '关于我', hole: '虚恋', notice: '须知', script: '话术', reviews: '板评', cards: '卡类', end: '卷终' };
   let curIdx = 0;
 
   function setModule(sec) {
