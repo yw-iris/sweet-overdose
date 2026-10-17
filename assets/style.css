@@ -173,6 +173,14 @@ section{min-height:100vh;display:flex;flex-direction:column;justify-content:cent
   border:1px solid var(--mint2);animation:ring 2.4s ease-out infinite}
 @keyframes ring{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.4);opacity:0}}
 @media(max-width:760px){.music{right:12px;bottom:12px;width:42px;height:42px;font-size:15px}}
+/* 背景音乐标签：播放时浮现在按钮左侧 */
+.bgm-label{position:fixed;right:72px;bottom:27px;z-index:1500;font-family:var(--mono);
+  font-size:12px;letter-spacing:.18em;color:var(--deep);background:rgba(255,255,255,.85);
+  padding:5px 13px;border-radius:20px;border:1px solid var(--line-mint);backdrop-filter:blur(6px);
+  box-shadow:var(--soft);opacity:0;transform:translateX(10px);pointer-events:none;
+  transition:opacity .5s,transform .5s;white-space:nowrap}
+.bgm-label.show{opacity:1;transform:translateX(0)}
+@media(max-width:760px){.bgm-label{right:62px;bottom:21px;font-size:11px;padding:4px 10px}}
 
 #toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);opacity:0;
   font-family:var(--cute);font-size:14px;letter-spacing:.16em;color:var(--deep);border:1px solid var(--line-mint);

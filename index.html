@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Noto+Serif+SC:wght@300;600;700&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=31">
+<link rel="stylesheet" href="assets/style.css?v=32">
 </head>
 <body class="desk-on">
 
@@ -411,7 +411,9 @@
     </section>
   </main>
 
-  <button class="music" id="music" title="环境音 · 窗台午后" aria-label="环境音开关">♫</button>
+  <audio id="bgm" src="assets/MorningRain.mp3" loop preload="auto"></audio>
+  <span class="bgm-label" id="bgmLabel">♪ Morning Rain</span>
+  <button class="music off" id="music" title="背景音乐 · Morning Rain（点击开关）" aria-label="背景音乐开关">♫</button>
   <div class="petals" id="petals" style="position:fixed;inset:0;pointer-events:none;z-index:3"></div>
   <div class="footer">阿枯 · 座隅 // <b>過於依賴妳也怪我嗎</b> &nbsp;·&nbsp; 檐下灯常明</div>
   <div id="toast"></div>

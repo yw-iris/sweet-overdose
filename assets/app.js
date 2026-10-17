@@ -134,65 +134,35 @@ function spawnSugar() {
   }
 }
 
-/* ===== 环境音（WebAudio 合成） ===== */
+/* ===== 背景音乐（Morning Rain.mp3） ===== */
 (function () {
   const btn = document.getElementById('music');
-  if (!btn) return;
-  let actx = null, master = null, nodes = [], timer = null, playing = false;
-  const SCALE = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25];
+  const audio = document.getElementById('bgm');
+  const label = document.getElementById('bgmLabel');
+  if (!btn || !audio) return;
+  let playing = false, userPaused = false;
+  try { if (localStorage.getItem('ga-music') === 'off') userPaused = true; } catch (e) {}
+  audio.volume = 0.5;
 
-  function build() {
-    actx = new (window.AudioContext || window.webkitAudioContext)();
-    master = actx.createGain(); master.gain.value = 0; master.connect(actx.destination);
-    const filt = actx.createBiquadFilter(); filt.type = 'lowpass'; filt.frequency.value = 1500; filt.Q.value = .6;
-    filt.connect(master);
-    const pad = actx.createGain(); pad.gain.value = .05; pad.connect(filt);
-    [130.81, 196.00, 261.63].forEach((f, i) => {
-      const o = actx.createOscillator(); o.type = 'sine'; o.frequency.value = f;
-      o.detune.value = i * 4 - 4;
-      const lfo = actx.createOscillator(), lg = actx.createGain();
-      lfo.frequency.value = .05 + i * .03; lg.gain.value = .022;
-      lfo.connect(lg); lg.connect(pad.gain);
-      o.connect(pad); o.start(); lfo.start();
-      nodes.push(o, lfo);
-    });
-    nodes.push(pad, filt);
-  }
-  function pluck() {
-    if (!playing) return;
-    const t = actx.currentTime;
-    const f = SCALE[Math.floor(Math.random() * SCALE.length)];
-    const o = actx.createOscillator(), g = actx.createGain();
-    o.type = 'triangle'; o.frequency.value = f;
-    g.gain.setValueAtTime(0, t);
-    g.gain.linearRampToValueAtTime(.09, t + .02);
-    g.gain.exponentialRampToValueAtTime(.0001, t + 2.6);
-    o.connect(g); g.connect(master);
-    o.start(t); o.stop(t + 2.7);
-    timer = setTimeout(pluck, 1600 + Math.random() * 3200);
+  function reflect() {
+    btn.classList.toggle('on', playing);
+    btn.classList.toggle('off', !playing);
+    if (label) label.classList.toggle('show', playing);
+    try { localStorage.setItem('ga-music', playing ? 'on' : 'off'); } catch (e) {}
   }
   function start() {
-    if (!actx) build();
-    actx.resume();
-    playing = true;
-    master.gain.cancelScheduledValues(actx.currentTime);
-    master.gain.setValueAtTime(master.gain.value, actx.currentTime);
-    master.gain.linearRampToValueAtTime(.5, actx.currentTime + 3);
-    clearTimeout(timer); timer = setTimeout(pluck, 900);
-    btn.classList.remove('off'); btn.classList.add('on');
+    audio.play().then(() => { playing = true; reflect(); })
+      .catch(() => { playing = false; reflect(); });
   }
-  function stop() {
-    playing = false; clearTimeout(timer);
-    if (master) {
-      master.gain.cancelScheduledValues(actx.currentTime);
-      master.gain.setValueAtTime(master.gain.value, actx.currentTime);
-      master.gain.linearRampToValueAtTime(0, actx.currentTime + .6);
-    }
-    btn.classList.add('off'); btn.classList.remove('on');
-  }
-  window.__startAmbient = start;
-  window.__stopAmbient = stop;
-  btn.addEventListener('click', () => { playing ? stop() : start(); });
+  function pauseAudio() { audio.pause(); playing = false; reflect(); }
+  function resumeIfAllowed() { if (!userPaused) start(); }   // 进入内页自动起播（绕过自动播放限制）
+  window.__startAmbient = resumeIfAllowed;
+  window.__stopAmbient = pauseAudio;                          // 返回桌面仅暂停，不标记用户意愿
+  btn.addEventListener('click', () => {
+    if (playing) { audio.pause(); playing = false; userPaused = true; reflect(); }
+    else { userPaused = false; start(); }
+  });
+  reflect();
 })();
 
 /* ===== 卡类 · 相遇计时（自 2024-03-10 起累计） ===== */
